@@ -592,6 +592,11 @@ adm-zip@^0.4.9:
   resolved "https://registry.yarnpkg.com/adm-zip/-/adm-zip-0.4.14.tgz#2cf312bcc9f8875df835b0f6040bd89be0a727a9"
   integrity sha512-/9aQCnQHF+0IiCl0qhXoK7qs//SwYE7zX8lsr/DNk1BRAHYxeLZPL4pguwK29gUEqasYQjqPtEpDRSWEkdHn9g==
 
+admin-lte-css@^2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/admin-lte-css/-/admin-lte-css-2.4.3.tgz#ac8453da3098dac19790176171eefbd6511b545b"
+  integrity sha512-6fDDrRh9Fyw74lsfn3QlAptXBi1bDiHXEBBk8enScw2OfKNZORkDbNBkYsZ7spFHb7dnBdkks0PZfAN8uX4wzw==
+
 after@0.8.2:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/after/-/after-0.8.2.tgz#fedb394f9f0e02aa9768e702bda23b505fae7e1f"
@@ -662,6 +667,15 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
   integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
+
+angular-admin-lte@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/angular-admin-lte/-/angular-admin-lte-2.0.1.tgz#ee52895d53be8427c6b44dc101fc9822ced4c9f3"
+  integrity sha512-RrxCF1rBz+MqIdcNWodjTqy6BErmlUSEOksTWrZAN6b742sZBNtp/FdW1vdzMrH2sycDwozqjx6jpnEt0K96sw==
+  dependencies:
+    admin-lte-css "^2.4.3"
+    bootstrap-css-only "^3.3.7"
+    tslib "^1.9.0"
 
 ansi-colors@^3.0.0:
   version "3.2.4"
@@ -1099,6 +1113,11 @@ bonjour@^3.5.0:
     dns-txt "^2.0.2"
     multicast-dns "^6.0.1"
     multicast-dns-service-types "^1.1.0"
+
+bootstrap-css-only@^3.3.7:
+  version "3.3.7"
+  resolved "https://registry.yarnpkg.com/bootstrap-css-only/-/bootstrap-css-only-3.3.7.tgz#68a15925aa7b9b0fc0feb73ff85d8b8c3989c16d"
+  integrity sha1-aKFZJap7mw/A/rc/+F2LjDmJwW0=
 
 brace-expansion@^1.1.7:
   version "1.1.11"
