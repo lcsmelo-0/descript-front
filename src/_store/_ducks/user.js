@@ -32,6 +32,9 @@ export default function user(state = INITIAL_STATE, action) {
         error: null
       }
     case Types.SIGN_IN_SUCCESS:
+      console.log('state')
+            console.log(state)
+      alert(1)
       return {
         ...state,
         loading: false,
@@ -51,6 +54,13 @@ export default function user(state = INITIAL_STATE, action) {
         refreshToken: action.payload.data.refresh_token,
         refreshTokenExpiration: action.payload.data.refreshTokenExpiresAt,
         resetHistory: action.resetHistory
+      }
+    case Types.SIGN_IN_ERROR: 
+          console.log('state')
+            console.log(state)
+      alert(1)
+      return {
+        ...state
       }
     default:
       return state

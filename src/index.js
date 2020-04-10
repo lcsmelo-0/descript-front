@@ -5,6 +5,10 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 
+import "./assets/scss/black-dashboard-react.scss";
+import "./assets/demo/demo.css";
+import "./assets/css/nucleo-icons.css";
+
 import './_config/reactotron'
 import storeConfig from './_store'
 import App from './App'

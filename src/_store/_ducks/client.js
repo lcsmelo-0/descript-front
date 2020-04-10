@@ -20,6 +20,7 @@ export default function client(state = INITAL_STATE, action) {
         error: null
       }
     case Types.GET_CLIENT_SUCCESS: 
+
       return {
         ...state,
         loading: false,
