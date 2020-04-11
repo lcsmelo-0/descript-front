@@ -31,6 +31,7 @@ export default function user(state = INITIAL_STATE, action) {
         refreshTokenExpiration: null,
         error: null
       }
+
     case Types.SIGN_IN_SUCCESS:
       return {
         ...state,
@@ -46,11 +47,7 @@ export default function user(state = INITIAL_STATE, action) {
             ? action.payload.data.user.profile.limitedAccess
             : false
         },
-        accessToken: action.payload.data.access_token,
-        accessTokenExpiration: action.payload.data.accessTokenExpiresAt,
-        refreshToken: action.payload.data.refresh_token,
-        refreshTokenExpiration: action.payload.data.refreshTokenExpiresAt,
-        resetHistory: action.resetHistory
+        accessToken: action.payload.data.access_token
       }
     default:
       return state
@@ -58,11 +55,13 @@ export default function user(state = INITIAL_STATE, action) {
 }
 
 export const Creators = {
-  signInRequest: (username, password) => ({
-    type: Types.SIGN_IN_REQUEST,
-    username,
-    password
-  }),
+  signInRequest: (username, password) =>
+    ({
+      type: Types.SIGN_IN_REQUEST,
+      username,
+      password
+    })
+  ,
   signInSuccess: (data, resetHistory) => ({
     type: Types.SIGN_IN_SUCCESS,
     payload: { data },

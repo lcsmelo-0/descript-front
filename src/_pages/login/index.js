@@ -6,16 +6,18 @@ import { Redirect } from 'react-router-dom'
 import { Creators as UserActions } from '../../_store/_ducks/user'
 
 import {
-  getToken,
-  getUserName,
-  getUserEmail,
-  getUserId
+  getToken
 } from '../../_services/auth'
 
 class Login extends Component {
-  state = {
-    username: '',
-    password: ''
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: '',
+      password: ''
+    }
+    this.handleChange = this.handleChange.bind(this)
   }
 
   componentDidMount() {
@@ -25,15 +27,10 @@ class Login extends Component {
       signOut
     } = this.props
 
-    if(!loggedIn) {
-      if(getToken()) {
+    if (!loggedIn) {
+      if (getToken()) {
         const data = {
-          access_token: getToken(),
-          user: {
-            id: getUserId(),
-            name: getUserName(),
-            email: getUserEmail()
-          }
+          access_token: getToken()
         }
         signInSuccess(data, false)
       } else {
@@ -42,24 +39,38 @@ class Login extends Component {
       }
     }
   }
-  handleLogin = () => {
 
+  handleChange = event => {
+    const { name, value } = event.target
+    this.setState({ [name]: value })
+
+    // this.setState({ ...this.state, username: event.target.username, password: event.target.password })
+  }
+
+  handleLogin = e => {
+    e.preventDefault();
     const { username, password } = this.state
     const { signInRequest } = this.props
-    signInRequest(username, password)
+    if (username && password) {
+      alert(2)
+      signInRequest(username, password)
+    }
+
+    console.log(this.state)
+    alert(1)
   }
 
   render() {
-    const {
-      user: { loggedIn, loading } 
-    } = this.props
-
+    const { username, password } = this.state
+    const { user: { loggedIn, loading } } = this.props
+    if (loggedIn) {
+      return <Redirect to="/" />
+    }
     return (
-      <form onSubmit={!loading && this.handleLogin}>
-        <input name="username" type="text" />
-        <input name="password" type="password" />
+      <form onSubmit={this.handleLogin}>
+        <input name="username" value={username} onChange={this.handleChange} type="text" />
+        <input name="password" value={password} onChange={this.handleChange} type="password" />
         <button type="submit" value="enviar">Enviar</button>
-
       </form>
     )
   }
