@@ -1,0 +1,18 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+
+
+  <div class="form-group">
+    <label for="file">File</label>
+    <input formControlName="file" accept="image/png, image/jpeg" id="file" type="file" class="form-control"
+      (change)="onFileChange($event)">
+    <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
+      <div *ngIf="f.file.errors.required">File is required.</div>
+    </div>
+  </div>
+  <img [src]="imageSrc" *ngIf="imageSrc">
+  <div class="form-group">
+    <label for="text">Description</label>
+    <textarea class="form-control" formGroupControl="subtitle" [(ngModel)]="subtitle"></textarea>
+  </div>
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>

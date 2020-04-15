@@ -1,0 +1,8 @@
+<div>
+  <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+  <div *ngIf="isClient">
+    <app-client-dashboard></app-client-dashboard>
+  </div>
+  <div *ngIf="isEditor">Editor</div>
+  <div *ngIf="isReviser">Reviser</div>
+</div>
