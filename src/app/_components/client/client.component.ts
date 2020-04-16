@@ -37,7 +37,6 @@ export class ClientComponent {
 
   onSubmit = () => {
     this.loading = true
-    console.log(this.myForm.value)
     this.imageService.submitImage(this.myForm.value)
       .subscribe(res => {
         console.log(res)

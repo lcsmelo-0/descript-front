@@ -16,7 +16,6 @@ export class HomeComponent {
     this.userService.getUser().pipe(first()).subscribe(user => {
       this.loading = false
       this.user = user
-      console.log(this.user)
     })
 
   }

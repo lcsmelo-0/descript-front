@@ -1,6 +1,4 @@
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-
-
   <div class="form-group">
     <label for="file">File</label>
     <input formControlName="file" accept="image/png, image/jpeg" id="file" type="file" class="form-control"
@@ -12,7 +10,7 @@
   <img [src]="imageSrc" *ngIf="imageSrc">
   <div class="form-group">
     <label for="text">Description</label>
-    <textarea class="form-control" formGroupControl="subtitle" [(ngModel)]="subtitle"></textarea>
+    <textarea class="form-control" formControlName="subtitle"></textarea>
   </div>
   <button class="btn btn-primary" type="submit">Submit</button>
 </form>

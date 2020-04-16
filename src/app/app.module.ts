@@ -1,6 +1,6 @@
 ﻿import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule, FormsModule } from '@angular/forms'
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { FileUploadModule } from 'ng2-file-upload';
 // used to create fake backend
@@ -17,11 +17,12 @@ import { ClientComponent } from '@app/_components'
 
 @NgModule({
   imports: [
-    BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
     appRoutingModule,
-    FileUploadModule
+    FileUploadModule,
+    BrowserModule,
+    FormsModule
   ],
   declarations: [
     AppComponent,
