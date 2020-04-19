@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, Validators, FormControl } from '@angular/forms'
+import { Router } from '@angular/router'
 
 import { ImageService } from '@app/_services';
 
@@ -15,7 +16,7 @@ export class ClientComponent {
     fileSource: new FormControl('', [Validators.required])
   });
 
-  constructor(private imageService: ImageService) { }
+  constructor(private imageService: ImageService, private router: Router,) { }
 
   get f() {
     return this.myForm.controls
@@ -40,6 +41,7 @@ export class ClientComponent {
     this.imageService.submitImage(this.myForm.value)
       .subscribe(res => {
         console.log(res)
+        window.location.reload();
       })
   }
 

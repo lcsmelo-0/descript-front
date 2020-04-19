@@ -9,11 +9,12 @@ import { FileUploadModule } from 'ng2-file-upload';
 import { AppComponent } from './app.component'
 import { appRoutingModule } from './app.routing'
 
-import { JwtInterceptor, ErrorInterceptor } from './_helpers'
-import { HomeComponent } from './home'
+import { JwtInterceptor, ErrorInterceptor } from '@app/_helpers'
+
 import { LoginComponent } from './login'
 import { DashboardComponent } from './dashboard'
-import { ClientComponent } from '@app/_components'
+import { WorkflowComponent } from './worflow'
+import { ClientComponent, EditorComponent, ReviserComponent } from '@app/_components'
 
 @NgModule({
   imports: [
@@ -26,10 +27,12 @@ import { ClientComponent } from '@app/_components'
   ],
   declarations: [
     AppComponent,
-    HomeComponent,
+    WorkflowComponent,
     LoginComponent,
     DashboardComponent,
-    ClientComponent
+    ClientComponent,
+    EditorComponent,
+    ReviserComponent,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

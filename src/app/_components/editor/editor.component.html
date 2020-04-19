@@ -1,0 +1,13 @@
+<h2>Dashboard do editor</h2>
+<div class="d-flex flex-row justify-content-between bd-highlight mb-3">
+  
+  <div class="card" style="width: 18rem;"  *ngFor="let image of images">
+    <img class="card-img-top" [src]="sanitizeImageUrl('https://loremflickr.com/640/480?random')" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ image.name }}</h5>
+      <p class="card-text">{{ image.description }}</p>
+      <a href="/worflow/{{ image.id }}" class="btn btn-primary">Iniciar trabalho</a>
+    </div>
+  </div>
+
+</div>
