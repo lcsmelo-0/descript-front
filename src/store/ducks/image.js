@@ -5,6 +5,9 @@ export const Types = {
   GET_IMAGE_REQUEST: 'image/GET_IMAGE_REQUEST',
   GET_IMAGE_SUCCESS: 'image/GET_IMAGE_SUCCESS',
   GET_IMAGE_ERROR: 'image/GET_IMAGE_ERROR',
+  SET_IMAGE_REQUEST: 'image/SET_IMAGE_REQUEST',
+  SET_IMAGE_SUCCESS: 'image/SET_IMAGE_SUCCESS',
+  SET_IMAGE_ERROR: 'image/SET_IMAGE_ERROR',
 
 }
 
@@ -55,6 +58,21 @@ export default function image(state = INITIAL_STATE, action) {
         ...state,
         loading: false
       }
+    case Types.SET_IMAGE_REQUEST:
+      return {
+        ...state,
+        loading: false
+      }
+    case Types.SET_IMAGE_SUCCESS:
+      return {
+        ...state,
+        loading: false
+      }
+    case Types.SET_IMAGE_ERROR:
+      return {
+        ...state,
+        loading: false
+      }
     default:
       return state
   }
@@ -81,6 +99,18 @@ export const Creators = {
   }),
   getImageError: response => ({
     type: Types.GET_IMAGE_ERROR,
+    payload: { response }
+  }),
+  setImageRequest: () => ({
+    type: Types.SET_IMAGE_REQUEST,
+    
+  }),
+  setImageSuccess: response => ({
+    type: Types.SET_IMAGE_SUCCESS,
+    payload: { response }
+  }),
+  setImageError: response => ({
+    type: Types.SET_IMAGE_ERROR,
     payload: { response }
   })
 }

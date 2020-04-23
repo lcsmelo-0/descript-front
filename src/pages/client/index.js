@@ -5,7 +5,8 @@ import { Creators as ImageActions } from '../../store/ducks/image'
 import { Creators as WorkflowActions } from '../../store/ducks/workflow'
 
 import Spinner from '../../components/icons/Spinner'
-import { Container, Row, Col, Card, CardBody, CardTitle, CardImg, CardText, CardHeader, Badge, Button } from 'reactstrap'
+import Notification from '../../components/molecules/Notification'
+import { Container, Row, Col, Card, CardBody, CardTitle, CardImg, CardText, CardHeader, Badge, Button, UncontrolledAlert } from 'reactstrap'
 
 const Client = () => {
 
