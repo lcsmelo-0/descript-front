@@ -3,11 +3,11 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Redirect } from 'react-router-dom'
 import * as Yup from 'yup'
-import { Button, Card,CardHeader, CardBody, CardFooter, CardText, FormGroup, Form, Input, Row, Col } from "reactstrap";
+import { Button, FormGroup, Form, Input, Row, Col } from "reactstrap";
 
 import  Spinner  from '../../components/icons/Spinner'
 
-import toastr from '../../utils/toastr'
+
 
 import {
   LOCAL_KEY,
@@ -48,12 +48,9 @@ class Login extends Component {
     const {
       user: { loggedIn },
       signInSuccess,
-      signOut,
-      location
+      signOut
     } = this.props
-    if(loggedIn) {
-      alert('logado')
-    }
+
     console.log(LOCAL_KEY, getLocalObj(LOCAL_KEY))
 
     if (getLocalObj(LOCAL_KEY) && !loggedIn) {
@@ -100,8 +97,7 @@ class Login extends Component {
 
   render() {
     const {
-      location,
-      user: { loading, loggedIn, resetHistory, userType: { isClient, isEditor, isReviser } },
+      user: { loading, loggedIn, userType: { isClient, isEditor, isReviser } },
       
     } = this.props
     

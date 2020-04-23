@@ -35,7 +35,7 @@ export function* signIn(action) {
       }
     )
     console.log('userDetailsResponse => ', userDetailsResponse)
-    if(!userDetailsResponse) {
+    if (!response) {
       toastr.error('Usuário sem perfil, ente em contato com o suporte')
       
       yield put(UserActions.signInError())
@@ -76,7 +76,9 @@ export function* signIn(action) {
 
     yield put(UserActions.signInSuccess(data, true))
   } catch(err) {
+    console.log('ERROR', err.response.status)
     if (err.response.status === 401 || err.response.status === 400) {
+
       toastr.error('Erro', 'Usuário ou senha incorretos.')
     }
     if (err.response.status === 404) {

@@ -6,7 +6,7 @@ export default reducers => {
     {
       key: 'front-descript',
       storage,
-      whitelist: ['team', 'image', 'images']
+      whitelist: ['user']
     },
     reducers
   )
