@@ -1,41 +1,49 @@
 import React, { useEffect, useState } from 'react'
 import { connect, useDispatch, useSelector } from 'react-redux'
 import { bindActionCreators } from 'redux'
+
 import { Creators as ImageActions } from '../../store/ducks/image'
 import { Creators as WorkflowActions } from '../../store/ducks/workflow'
 
-import Spinner from '../../components/icons/Spinner'
-import { Container, Row, Col, Form, FormGroup, Input, Button } from 'reactstrap'
+import { useFormFields } from '../../utils/hooks'
 
+import Spinner from '../../components/icons/Spinner'
+
+import { Container, Row, Col, Form, FormGroup, Input, Button } from 'reactstrap'
 
 const ClientForm = () => {
 
-  const [file, setFile] = useState('')
-  const [name, setName] = useState('')
-  const [description, setDescription] = useState('')
+  const [fields, handleFieldsChange] = useFormFields({
+    name: "",
+    file: "",
+    description: ""
+
+  })
   const dispatch = useDispatch()
 
-  const { images, loading } = useSelector((state) => state.image)
+  const {  loading } = useSelector((state) => state.image)
 
   useEffect(() => {
     dispatch(ImageActions.getImagesRequest())
   }, [])
 
-  const handleSubmit = e =>  {
-    e.preventDefault()
-    console.log(e)
-  }
 
-  const handleChange = event => {
+  const handleImage = event => {
     const reader = new FileReader()
     if (event.target.files && event.target.files.length) {
       const [file] = event.target.files
       reader.readAsDataURL(file)
       reader.onload = () => {
-        file = (reader.result)
+        fields.file = reader.result
       }
     }
   }
+
+  const handleSubmit = event => {
+    event.preventDefault()
+    dispatch(ImageActions.setImageRequest(fields))
+  }
+
   return (
     <>
       {loading ? (
@@ -44,17 +52,34 @@ const ClientForm = () => {
         </div>
       ) : (
           <Container>
-            <Col md="12">
               <Row>
-                <Form onSubmit={(e) => handleSubmit(e)}>
-                  <Row>
-                    <FormGroup>
-                       <Button>Upload<Input type="file" accept="image/*" name="file" id="exampleFile" onChange={ (e) => handleChange(e)} /></Button>
-                    </FormGroup>
-                  </Row>
+              <Form onSubmit={handleSubmit}>
+                  <Col md="12">
+                    <Row>
+                      <FormGroup>
+                      <Input type="name" name="name" value={fields.name}  id="name" onChange={handleFieldsChange} />
+                      </FormGroup>
+                    </Row>                  
+                  </Col>
+                  <Col md="12">
+                    <Row>
+                      <FormGroup>
+                      <Button>Upload<Input type="file" accept="image/*" name="file" onChange={(e) => handleImage(e)} /></Button>
+                      </FormGroup>
+                    </Row>                  
+                  </Col>
+
+                  <Col md="12">
+                    <Row>
+                      <FormGroup>
+                        <label>Sugerir descrição</label>
+                      <Input type="textarea" name="description" value={fields.description} id="description" onChange={handleFieldsChange} />
+                      </FormGroup>
+                    </Row>                  
+                  </Col>
+                  <Button type="submit">Enviar</Button>
                 </Form>
               </Row>
-            </Col>
           </Container>
         )}
     </>

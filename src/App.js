@@ -7,6 +7,7 @@ import Routes from './routes'
 import "./assets/scss/black-dashboard-react.scss";
 import "./assets/demo/demo.css";
 import "./assets/css/nucleo-icons.css";
+import "./assets/css/custom.css"
 
 function App() {
   return (

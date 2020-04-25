@@ -11,7 +11,8 @@ import {
 
 import {
   getImage,
-  getImages
+  getImages,
+  setImage
 } from './image'
 
 import {
@@ -28,6 +29,7 @@ export default function* rootSaga() {
     //IMAGE
     takeLatest(ImageTypes.GET_IMAGE_REQUEST, getImage),
     takeLatest(ImageTypes.GET_IMAGES_REQUEST, getImages),
+    takeLatest(ImageTypes.SET_IMAGE_REQUEST, setImage),
     
     //Workflow
     takeLatest(WorkflowTypes.GET_WORKFLOW_STATUS_REQUEST, getWorkflowStatus),

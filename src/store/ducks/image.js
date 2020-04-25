@@ -58,16 +58,24 @@ export default function image(state = INITIAL_STATE, action) {
         ...state,
         loading: false
       }
-    case Types.SET_IMAGE_REQUEST:
+    case Types.SET_IMAGE_REQUEST:{
+      console.log('request action',action)
       return {
         ...state,
-        loading: false
-      }
+        loading: false,
+        image: {
+          name: action.image.name,
+          file: action.image.file,
+          description: action.image.description
+        }
+      }}
     case Types.SET_IMAGE_SUCCESS:
+
       return {
         ...state,
         loading: false
       }
+
     case Types.SET_IMAGE_ERROR:
       return {
         ...state,
@@ -101,9 +109,9 @@ export const Creators = {
     type: Types.GET_IMAGE_ERROR,
     payload: { response }
   }),
-  setImageRequest: () => ({
+  setImageRequest: image => ({
     type: Types.SET_IMAGE_REQUEST,
-    
+    image
   }),
   setImageSuccess: response => ({
     type: Types.SET_IMAGE_SUCCESS,

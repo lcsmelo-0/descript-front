@@ -21,3 +21,19 @@ export function* getImage(action) {
     yield put(ImageActions.getImageError(err.message))
   }
 }
+
+export function* setImage(action) {
+  console.log(action)
+  const requestBody = {
+    name: action.image.name,
+    fileSource: action.image.file,
+    description: action.image.description,
+  }
+  try {
+    const response = yield retry(6,100, descriptApi.post, '/image-submit', requestBody)
+    console.log(response)
+    yield put(ImageActions.setImageSuccess(response.data))
+  } catch (err) {
+    yield put(ImageActions.setImageError(err.message))
+  }
+}
