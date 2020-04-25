@@ -1,14 +1,101 @@
-import React, { Component } from 'react'
+import React, { useEffect } from "react";
+import { connect, useDispatch, useSelector } from "react-redux";
+import { bindActionCreators } from "redux";
+import { Creators as ImageActions } from "../../store/ducks/image";
+import {
+  Card,
+  CardBody,
+  CardTitle,
+  CardText,
+  CardImg,
+  CardHeader,
+  Row,
+  Col,
+  Container,
+  Badge,
+  CardFooter
+} from "reactstrap";
 
-export default class Reviser extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Dashboard</h1>
-        <div className="container">
-          <h5>Area logada do revisor</h5>
+import Spinner from "../../components/icons/Spinner";
+
+const Reviser = () => {
+  const dispatch = useDispatch();
+
+  const { images, loading } = useSelector(state => state.image);
+
+  useEffect(() => {
+    dispatch(ImageActions.getImagesRequest());
+  }, []);
+
+  return (
+    <>
+      {loading ? (
+        <div className="container d-flex flex-column  md-12">
+          <Spinner />
         </div>
-      </div>
-    )
-  }
-}
+      ) : (
+        <Container>
+          <Row md="12" className="d-flex flex-row justify-content-start">
+            {images.map(img => {
+              return (
+                <>
+                  {console.log(img)}
+                  {img.workflow && img.workflow.step != 2 ? (
+                    <>
+                      <div>Nenhum trabalho no momento</div>
+                    </>
+                  ) : (
+                    <Col xs={4}>
+                      <Card>
+                        <CardHeader>
+                          {img.workflow ? (
+                            <Badge color="primary" pill>
+                              {img.workflow.status}
+                            </Badge>
+                          ) : (
+                            <></>
+                          )}
+                        </CardHeader>
+                        <CardBody>
+                          <CardImg
+                            src={img.file}
+                            top
+                            width="100%"
+                            alt={img.name}
+                          />
+                          <CardTitle>{img.name}</CardTitle>
+                          {img.texts ? (
+                            <>
+                              <CardText>
+                                {img.texts[img.texts.length - 1].text}
+                              </CardText>
+                            </>
+                          ) : (
+                            <></>
+                          )}
+                        </CardBody>
+                        <CardFooter>
+                          <a
+                            href={`/detail/${img.id}`}
+                            className="btn btn-primary"
+                          >
+                            Editar
+                          </a>
+                        </CardFooter>
+                      </Card>
+                    </Col>
+                  )}
+                </>
+              );
+            })}
+          </Row>
+        </Container>
+      )}
+    </>
+  );
+};
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ ...ImageActions }, dispatch);
+
+export default connect(mapDispatchToProps)(Reviser);
