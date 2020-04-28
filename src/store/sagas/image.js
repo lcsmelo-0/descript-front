@@ -14,7 +14,6 @@ export function* getImages() {
 }
 
 export function* getImage(action) {
-  console.log(action.id);
   try {
     const response = yield retry(
       6,
@@ -29,7 +28,6 @@ export function* getImage(action) {
 }
 
 export function* setImage(action) {
-  console.log(action);
   const requestBody = {
     name: action.image.name,
     fileSource: action.image.file,
@@ -43,7 +41,6 @@ export function* setImage(action) {
       "/image-submit",
       requestBody
     );
-    console.log(response);
     yield put(ImageActions.setImageSuccess(response.data));
   } catch (err) {
     yield put(ImageActions.setImageError(err.message));

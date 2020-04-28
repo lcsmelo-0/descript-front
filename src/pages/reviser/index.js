@@ -17,6 +17,7 @@ import {
 } from "reactstrap";
 
 import Spinner from "../../components/icons/Spinner";
+import Header from "../../components/Header";
 
 const Reviser = () => {
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ const Reviser = () => {
 
   return (
     <>
+      <Header />
       {loading ? (
         <div className="container d-flex flex-column  md-12">
           <Spinner />
@@ -39,7 +41,6 @@ const Reviser = () => {
             {images.map(img => {
               return (
                 <>
-                  {console.log(img)}
                   {img.workflow && img.workflow.step != 2 ? (
                     <>
                       <div>Nenhum trabalho no momento</div>

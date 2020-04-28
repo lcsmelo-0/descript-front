@@ -18,7 +18,7 @@ export function* updateWorkflowStatus(action) {
       `/workflow-update`,
       requestBody
     );
-    console.log("RESPONSE ", response.data);
+
     yield put(WorkflowActions.updateWorkflowStatusSuccess(response.data));
   } catch (err) {
     yield put(WorkflowActions.updateImageError(err.message));
@@ -39,7 +39,7 @@ export function* approveWorkflow(action) {
       `/workflow-approve`,
       requestBody
     );
-    console.log("RESPONSE ", response.data);
+
     yield put(WorkflowActions.approveWorkflowSuccess(response.data));
   } catch (err) {
     yield put(WorkflowActions.approveWorkflowError(err.message));

@@ -34,14 +34,13 @@ export default function image(state = INITIAL_STATE, action) {
         ...state,
         loading: false
       };
-    case Types.GET_IMAGE_REQUEST: {
-      console.log(action);
+    case Types.GET_IMAGE_REQUEST:
       return {
         ...state,
         loading: true,
         id: action.id
       };
-    }
+
     case Types.GET_IMAGE_SUCCESS:
       return {
         ...state,

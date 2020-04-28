@@ -19,6 +19,7 @@ import {
 } from "reactstrap";
 
 import Spinner from "../../components/icons/Spinner";
+import Header from "../../components/Header";
 
 const Detail = props => {
   const [fields, handleFieldsChange] = useFormFields({
@@ -54,7 +55,7 @@ const Detail = props => {
     event.preventDefault();
     let imageId = props.match.params.id;
     let workflowId = image.workflow ? image.workflow.id : null;
-    console.log(imageId, workflowId);
+
     dispatch(
       WorkflowActions.updateWorkflowStatusRequest({
         fields,
@@ -71,7 +72,6 @@ const Detail = props => {
     let description = image.texts
       ? image.texts[image.texts.length - 1].text
       : null;
-    console.log(imageId, workflowId, description);
     dispatch(
       WorkflowActions.approveWorkflowRequest({
         description,
@@ -82,84 +82,81 @@ const Detail = props => {
   };
 
   return (
-    <Container>
-      <h1>Detalhe do trabalho</h1>
-      <Row>
-        {loading ? (
-          <div className="container d-flex flex-column md-12">
-            <Spinner />
-          </div>
-        ) : (
-          <Col className="container">
-            <Form onSubmit={handleSubmit}>
-              <Col className="d-flex flex-column" md="12">
-                <FormGroup>
-                  <label htmlFor="nome">Nome da imagem</label>
-                  <Input
-                    color="muted"
-                    name="nome"
-                    disabled
-                    value={image.name}
-                  />
-                </FormGroup>
-              </Col>
-              <Col className="d-flex flex-column" md="12">
-                <FormGroup>
-                  <p>Imagem:</p>
-                  <img src={image.file} alt={image.name} />
-                </FormGroup>
-              </Col>
-              <Col md="12">
-                <FormGroup>
-                  <label htmlFor="description">Descrição sugerida</label>
+    <>
+      <Header />
+      <Container>
+        <h1>Detalhe do trabalho</h1>
+        <Row>
+          {loading ? (
+            <div className="container d-flex flex-column md-12">
+              <Spinner />
+            </div>
+          ) : (
+            <Col className="container">
+              <Form onSubmit={handleSubmit}>
+                <Col className="d-flex flex-column" md="12">
+                  <FormGroup>
+                    <label htmlFor="nome">Nome da imagem</label>
+                    <Input
+                      color="muted"
+                      name="nome"
+                      disabled
+                      value={image.name}
+                    />
+                  </FormGroup>
+                </Col>
+                <Col className="d-flex flex-column" md="12">
+                  <FormGroup>
+                    <p>Imagem:</p>
+                    <img src={image.file} alt={image.name} />
+                  </FormGroup>
+                </Col>
+                <Col md="12">
+                  <FormGroup>
+                    <label htmlFor="description">Descrição sugerida</label>
 
-                  {image.texts ? (
+                    {image.texts ? (
+                      <Input
+                        type="textarea"
+                        disabled
+                        value={image.texts[image.texts.length - 1].text}
+                      />
+                    ) : (
+                      <></>
+                    )}
+                  </FormGroup>
+                </Col>
+                <Col md="12">
+                  <FormGroup>
+                    <label htmlFor="description">Descrição</label>
                     <Input
                       type="textarea"
-                      disabled
-                      value={image.texts[image.texts.length - 1].text}
+                      name="description"
+                      id="description"
+                      onChange={handleFieldsChange}
                     />
-                  ) : (
-                    <></>
-                  )}
-                </FormGroup>
-              </Col>
-              <Col md="12">
-                <FormGroup>
-                  <label htmlFor="description">Descrição</label>
-                  <Input
-                    type="textarea"
-                    name="description"
-                    id="description"
-                    onChange={handleFieldsChange}
-                  />
-                </FormGroup>
-              </Col>
+                  </FormGroup>
+                </Col>
 
-              <Col md="12">
-                <FormGroup>
-                  <Button type="submit">Enviar</Button>
-                  {userType.isReviser ? (
-                    <Button onClick={handleApprove} color="success">
-                      Aprovar
-                    </Button>
-                  ) : (
-                    <></>
-                  )}
-                </FormGroup>
-              </Col>
-            </Form>
-          </Col>
-        )}
-      </Row>
-    </Container>
+                <Col md="12">
+                  <FormGroup>
+                    <Button type="submit">Enviar</Button>
+                    {userType.isReviser ? (
+                      <Button onClick={handleApprove} color="success">
+                        Aprovar
+                      </Button>
+                    ) : (
+                      <></>
+                    )}
+                  </FormGroup>
+                </Col>
+              </Form>
+            </Col>
+          )}
+        </Row>
+      </Container>
+    </>
   );
 };
-const mapStateToProps = state => ({
-  image: state.image
-});
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators({ ...ImageActions, ...WorkflowActions }, dispatch);
-
-export default connect(mapStateToProps, mapDispatchToProps)(Detail);
+export default Detail;

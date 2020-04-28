@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
-import { connect, useDispatch, useSelector } from "react-redux";
-import { bindActionCreators } from "redux";
+import { useDispatch, useSelector } from "react-redux";
+
 import { Creators as ImageActions } from "../../store/ducks/image";
-import { Creators as WorkflowActions } from "../../store/ducks/workflow";
 
 import Spinner from "../../components/icons/Spinner";
 
@@ -18,6 +17,7 @@ import {
   CardHeader,
   Badge
 } from "reactstrap";
+import Header from "../../components/Header";
 
 const Client = () => {
   const dispatch = useDispatch();
@@ -30,6 +30,7 @@ const Client = () => {
 
   return (
     <>
+      <Header />
       {loading ? (
         <div className="container d-flex flex-column  md-12">
           <Spinner />
@@ -45,8 +46,6 @@ const Client = () => {
             {images.map(img => {
               return (
                 <>
-                  {console.log("image => ", img)}
-
                   <Col xs={4} key={img.id}>
                     <Card>
                       <CardHeader>
@@ -89,17 +88,4 @@ const Client = () => {
   );
 };
 
-const mapStateToProps = state => ({
-  image: state.image
-});
-
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(
-    {
-      ...ImageActions,
-      ...WorkflowActions
-    },
-    dispatch
-  );
-
-export default connect(mapStateToProps, mapDispatchToProps)(Client);
+export default Client;

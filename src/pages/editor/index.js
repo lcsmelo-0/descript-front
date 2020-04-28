@@ -17,6 +17,7 @@ import {
 } from "reactstrap";
 
 import Spinner from "../../components/icons/Spinner";
+import Header from "../../components/Header";
 
 const Editor = () => {
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ const Editor = () => {
 
   return (
     <>
+      <Header />
       {loading ? (
         <div className="container d-flex flex-column  md-12">
           <Spinner />

@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
-import { connect, useDispatch, useSelector } from "react-redux";
-import { bindActionCreators } from "redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { Creators as ImageActions } from "../../store/ducks/image";
-import { Creators as WorkflowActions } from "../../store/ducks/workflow";
 
 import { useFormFields } from "../../utils/hooks";
 
 import Spinner from "../../components/icons/Spinner";
+import Header from "../../components/Header";
 
 import {
   Container,
@@ -19,7 +18,7 @@ import {
   Button
 } from "reactstrap";
 
-const ClientForm = () => {
+const ClientForm = props => {
   const [fields, handleFieldsChange] = useFormFields({
     name: "",
     file: "",
@@ -47,10 +46,12 @@ const ClientForm = () => {
   const handleSubmit = event => {
     event.preventDefault();
     dispatch(ImageActions.setImageRequest(fields));
+    return props.history.goBack();
   };
 
   return (
     <>
+      <Header />
       {loading ? (
         <div className="container d-flex flex-column  md-12">
           <Spinner />
@@ -111,17 +112,4 @@ const ClientForm = () => {
   );
 };
 
-const mapStateToProps = state => ({
-  image: state.image
-});
-
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(
-    {
-      ...ImageActions,
-      ...WorkflowActions
-    },
-    dispatch
-  );
-
-export default connect(mapStateToProps, mapDispatchToProps)(ClientForm);
+export default ClientForm;
