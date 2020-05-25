@@ -10,11 +10,15 @@ import Reviser from "../pages/reviser";
 import Home from "../pages/home";
 import Detail from "../pages/detail";
 import ClientForm from "../pages/clientForm";
+import Princing from "../pages/pricing";
+import Faq from "../pages/faq";
 
 const Routes = () => (
   <Switch>
     <Route exact path="/" component={Home} />
     <Route exact path="/login" component={Login} />
+    <Route exact path="/pricing" component={Princing} />
+    <Route exact path="/faq" component={Faq} />
     <PrivateRoute exact path="/editor" component={Editor} />
     <PrivateRoute exact path="/client" component={Client} />
     <PrivateRoute exact path="/reviser" component={Reviser} />

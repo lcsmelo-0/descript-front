@@ -3,11 +3,8 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Redirect } from 'react-router-dom'
 import * as Yup from 'yup'
-import { Button, FormGroup, Form, Input, Row, Col } from "reactstrap";
 
-import  Spinner  from '../../components/icons/Spinner'
-
-
+import Spinner from '../../components/icons/Spinner'
 
 import {
   LOCAL_KEY,
@@ -35,23 +32,20 @@ const schema = Yup.object().shape({
   password: Yup.string()
     .required('Campo obrigatório')
 })
-
-
 class Login extends Component {
   state = {
     usernameInput: '',
     passwordInput: '',
-    refreshToken: false
+    refreshToken: false,
+    inputType: 'password'
   }
-  
-    componentDidMount() {
+
+  componentDidMount() {
     const {
       user: { loggedIn },
       signInSuccess,
       signOut
     } = this.props
-
-    console.log(LOCAL_KEY, getLocalObj(LOCAL_KEY))
 
     if (getLocalObj(LOCAL_KEY) && !loggedIn) {
       if (getToken()) {
@@ -76,17 +70,13 @@ class Login extends Component {
             isReviser: getUserType().isReviser
           }
         }
-
-        console.log('Valid local token')
         signInSuccess(data, false)
-      }  else {
-        console.log('Invalid/missing tokens')
+      } else {
         excludeData()
         signOut()
       }
     }
   }
-
 
   handleLogin = event => {
     event.preventDefault()
@@ -95,67 +85,97 @@ class Login extends Component {
     signInRequest(usernameInput, passwordInput)
   }
 
+  showPassword = () => {
+    this.setState({ inputType: this.state.inputType === 'password' ? 'text' : 'password' })
+  }
+
   render() {
     const {
       user: { loading, loggedIn, userType: { isClient, isEditor, isReviser } },
-      
     } = this.props
-    
+
     if (loggedIn && isClient) return <Redirect from="/login" to="/client" />
     if (loggedIn && isReviser) return <Redirect from="/login" to="/reviser" />
     if (loggedIn && isEditor) return <Redirect from="/login" to="/editor" />
+
     return (
       <>
-      {loading ? (
-        <div className="container d-flex flex-column  md-12"> 
-          <Spinner />
-        </div>
-      ) : (
-        <div className="d-flex flex-column">
-          <Row className="justify-content-center flex-row">
-            <Col md="4">
-              <Form schema={ schema } onSubmit={this.handleLogin}>
-                <Row>
-                  <Col className="pr-md-1" md="12">
-                    <FormGroup>
-                      <label>Email</label>
-                      <Input
-                        defaultValue="Seu email"
-                        placeholder="Email"
-                        type="text"
-                        onChange={e => this.setState({ usernameInput: e.target.value })}
-                      />
-                    </FormGroup>
-                  </Col>
-                  <Col className="pr-md-1" md="12">
-                    <FormGroup>
-                      <label>Password</label>
-                      <Input
-                        placeholder="Senha"
-                        type="password"
-                        onChange={e => this.setState({ passwordInput: e.target.value })}
-                      />
-                    </FormGroup>
-                  </Col>
-                  <Col>
-                    <Button>Enviar</Button>
-                  </Col>
-                </Row>
-              </Form>
-            </Col>
-          </Row>
-        </div>
-      )}
-   </>
+        {loading ? (
+          <div className="container d-flex flex-column  md-12">
+            <Spinner />
+          </div>
+        ) : (
+            <section>
+              <div className="container d-flex flex-column">
+                <div className="row align-items-center justify-content-center slice ">
+                  <div className="col-md-6 4 py-6 py-md-0">
+                    <div>
+                      <div className="mb-5 text-center">
+                        <h6 className="h3 mb-1">Login</h6>
+                        <p className="text-muted mb-0">Entre com sua conta para continuar.</p>
+                      </div>
+                      <span className="clearfix">
+                      </span>
+                      <form schema={schema} onSubmit={this.handleLogin}>
+                        <div className="form-group">
+                          <label className="form-control-label">Email</label>
+                          <div className="input-group input-group-merge">
+                            <input type="email" className="form-control form-control-prepend" id="input-email" placeholder="nome@exemplo.com" onChange={e => this.setState({ usernameInput: e.target.value })} />
+                            <div className="input-group-prepend">
+                              <span className="input-group-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-user">
+                                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2">
+                                  </path>
+                                  <circle cx="12" cy="7" r="4">
+                                  </circle>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="form-group mb-0">
+                          <div className="d-flex align-items-center justify-content-between">
+                            <div>
+                              <label className="form-control-label">Senha</label>
+                            </div>
+                            <div className="mb-2">
+                              <a href="#" className="small text-muted text-underline--dashed border-primary" onClick={this.showPassword}>Exibir senha</a>
+                            </div>
+                          </div>
+                          <div className="input-group input-group-merge">
+                            <input type={this.state.inputType} className="form-control form-control-prepend" id="input-password" placeholder="Password" onChange={e => this.setState({ passwordInput: e.target.value })} />
+                            <div className="input-group-prepend">
+                              <span className="input-group-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-key">
+                                  <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4">
+                                  </path>
+                                </svg>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="mt-4">
+                          <button type="submit" className="btn btn-block btn-primary">Entrar</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
+      </>
     )
   }
 }
 
-const mapStateToProps = state => ({
-  user: state.user
-})
+const mapStateToProps = state =>
+  ({
+    user: state.user
+  })
 
 const mapDispatchToProps = dispatch =>
+
   bindActionCreators({ ...UserActions }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login)
