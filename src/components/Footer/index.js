@@ -19,20 +19,7 @@ const Footer = props => {
                   <h3 className="text-secondary mb-2">Brilliant solutions for your ideas</h3>
                   <p className="lead mb-0 text-white opacity-8">Build modern looking websites fast and easy using Quick.</p>
                 </div>
-                <div className="col-lg-5 text-lg-right mt-4 mt-lg-0">
-                  <a href="../../docs/index.html" className="btn btn-white btn-icon my-2" target="_blank">
-                    <span className="btn-inner--icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-book text-primary">
-                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20">
-                        </path>
-                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z">
-                        </path>
-                      </svg>
-                    </span>
-                    <span className="btn-inner--text">Documentation</span>
-                  </a>
-                  <a href="https://themes.getbootstrap.com/product/quick-website-ui-kit-2/" className="btn btn-primary my-2 ml-0 ml-sm-3" target="_blank">Purchase now</a>
-                </div>
+
               </div>
             </div>
           </div>

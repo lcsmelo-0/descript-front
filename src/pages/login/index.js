@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Redirect } from 'react-router-dom'
 import * as Yup from 'yup'
+import { Container, Form, Col, Input, Button, FormGroup } from 'reactstrap'
+
 
 import Spinner from '../../components/icons/Spinner'
 
@@ -101,14 +103,14 @@ class Login extends Component {
     return (
       <>
         {loading ? (
-          <div className="container d-flex flex-column  md-12">
+          <Container className="d-flex flex-column  md-12">
             <Spinner />
-          </div>
+          </Container>
         ) : (
             <section>
-              <div className="container d-flex flex-column">
+              <Container>
                 <div className="row align-items-center justify-content-center slice ">
-                  <div className="col-md-6 4 py-6 py-md-0">
+                  <Col className="4 py-6 py-md-0" md="6">
                     <div>
                       <div className="mb-5 text-center">
                         <h6 className="h3 mb-1">Login</h6>
@@ -159,9 +161,9 @@ class Login extends Component {
                         </div>
                       </form>
                     </div>
-                  </div>
+                  </Col>
                 </div>
-              </div>
+              </Container>
             </section>
           )}
       </>
