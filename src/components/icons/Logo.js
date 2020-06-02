@@ -13,7 +13,7 @@ const Logo = () => {
       viewBox="0 0 190 114"
       enable-background="new 0 0 190 114" xml="preserve">
       <image id="image0" width="190" height="114" x="0" y="0"
-        xlink="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAL4AAAByCAYAAADtXmtSAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+        xlink="data:image/pngbase64,iVBORw0KGgoAAAANSUhEUgAAAL4AAAByCAYAAADtXmtSAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
 AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAA
 B3RJTUUH5AUTEQkq3NA/7QAAFedJREFUeNrtnXl4VNXZwH/vnSEkhE02F1xw+766VlzqSs0kQak7
 2iK0tYt+Lq22FZIJ9fHTohWFTCLyabXq01pX3Kt1rZCZUJaKK6AiqAgiKiqLQAKEzNz3++O9IZNk

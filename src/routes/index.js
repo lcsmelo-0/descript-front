@@ -1,17 +1,17 @@
-import React from "react";
-import { Switch, Route } from "react-router-dom";
+import React from "react"
+import { Switch, Route } from "react-router-dom"
 
-import { PrivateRoute } from "./PrivateRoute";
+import { PrivateRoute } from "./PrivateRoute"
 
-import Login from "../pages/login";
-import Client from "../pages/client";
-import Editor from "../pages/editor";
-import Reviser from "../pages/reviser";
-import Home from "../pages/home";
-import Detail from "../pages/detail";
-import ClientForm from "../pages/clientForm";
-import Princing from "../pages/pricing";
-import Faq from "../pages/faq";
+import Login from "../pages/login"
+import Client from "../pages/client"
+import Editor from "../pages/editor"
+import Reviser from "../pages/reviser"
+import Home from "../pages/home"
+import Detail from "../pages/detail"
+import ClientForm from "../pages/clientForm"
+import Princing from "../pages/pricing"
+import Faq from "../pages/faq"
 
 const Routes = () => (
   <Switch>
@@ -25,6 +25,6 @@ const Routes = () => (
     <PrivateRoute exact path="/detail/:id" component={Detail} />
     <PrivateRoute exact path="/client/image" component={ClientForm} />
   </Switch>
-);
+)
 
-export default Routes;
+export default Routes

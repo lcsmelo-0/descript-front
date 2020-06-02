@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 const Spinner = () => (
   <div className="container" style={{ height: "70vh" }}>
     <div
@@ -38,6 +38,6 @@ const Spinner = () => (
       </svg>
     </div>
   </div>
-);
+)
 
-export default Spinner;
+export default Spinner

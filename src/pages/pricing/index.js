@@ -26,7 +26,7 @@ const Princing = () => {
                   <li>Use in a free end product</li>
                   <li>6 months technical support</li>
                 </ul>
-                <a href="https://themes.getbootstrap.com/product/quick-website-ui-kit-2/" class="btn btn-sm btn-warning hover-translate-y-n3 hover-shadow-lg mb-3" target="_blank">Purchase now</a>
+                <a href="https://themes.getbootstrap.com/product/quick-website-ui-kit-2/" class="btn btn-sm btn-warning hover-translate-y-n3 hover-shadow-lg mb-3" >Purchase now</a>
               </div></div></div><div class="col-lg-4 col-md"><div class="card card-pricing bg-primary text-center px-3 shadow hover-scale-110">
                 <div class="card-header py-5 border-0 delimiter-bottom">
                   <div class="h1 text-white text-center mb-0">
@@ -40,14 +40,14 @@ const Princing = () => {
                     <li>Use in an end product that is <strong class="text-success text-underline--dashed">sold</strong></li>
                     <li>6 months technical support</li>
                   </ul>
-                  <a href="https://themes.getbootstrap.com/product/quick-website-ui-kit-2/" class="btn btn-sm btn-white hover-translate-y-n3 hover-shadow-lg mb-3" target="_blank">Purchase now</a>
+                  <a href="https://themes.getbootstrap.com/product/quick-website-ui-kit-2/" class="btn btn-sm btn-white hover-translate-y-n3 hover-shadow-lg mb-3" >Purchase now</a>
                 </div>
               </div>
           </div>
         </div>
         <div class="mt-5 text-center">
           <p class="mb-2">Both pricings contains all 6 months free support. Need more?</p>
-          <a href="#" class="text-primary text-underline--dashed">Contact us
+          <a href="/" class="text-primary text-underline--dashed">Contact us
         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="feather feather-arrow-right ml-2">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>

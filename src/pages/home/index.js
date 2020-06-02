@@ -10,15 +10,12 @@ import sportCouple from '../../assets/img/illustration-7.svg'
 export default class Home extends Component {
   render() {
     return (
-
       <>
         <section className="slice py-5 py-lg-7">
           <Container>
             <Row className="row row-grid align-items-center">
               <Col className="col-12 col-md-5 col-lg-6 order-md-2">
-                <figure className="w-100">
-                  <img alt="Image placeholder" src={computerGirl} className="img-fluid" />
-                </figure>
+                <img alt="Img placeholder" src={computerGirl} className="img-fluid" />
               </Col>
               <Col className="col-12 col-md-7 col-lg-6 order-md-1 pr-md-5">
                 <h1 className="display-4 text-center text-md-left mb-3">
@@ -31,15 +28,15 @@ export default class Home extends Component {
         </section>
         <section className="slice slice-lg pt-lg-6 pb-0 pb-lg-6">
           <Container>
-            <div className="row justify-content-lg-end">
-              <div className="col-lg-5 text-lg-right">
+            <Row className="justify-content-lg-end">
+              <Col className="col-lg-5 text-lg-right">
                 <h6 className="display-4 text-danger">3k+</h6>
                 <p className="lh-180 mb-3">Our mission is to give developers some amazing possibilities to create high quality digital products with less time and money spent.</p>
-              </div>
-              <div className="col-lg-6">
-                <h3 className="display-4 lh-130">Successfuly completed projects &amp; ideas</h3>
-              </div>
-            </div>
+              </Col>
+              <Col className="col-lg-6">
+                <h3 className="display-4 lh-130">Successfuly completed projects &amp ideas</h3>
+              </Col>
+            </Row>
             <Row md="5">
               <Col md="4">
                 <div className="card border-0 bg-soft-danger">
