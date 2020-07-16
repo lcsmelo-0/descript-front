@@ -1,0 +1,18 @@
+image: node
+
+stages:
+- build
+- stage
+
+build_frontend:
+  stage: build
+  script:
+  - cd ./src/frontend
+  - npm install && npm audit fix
+  # CI=false set to ignore warnings as errors
+  - CI=false npm run build
+  artifacts:
+    paths:
+    - ./src/frontend/build
+  tags:
+  - projectname
