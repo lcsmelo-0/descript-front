@@ -1,13 +1,20 @@
-import React from 'react'
+import React from "react";
 
-import logo from '../../assets/img/logo.png'
+import logo from "../../assets/img/logo.png";
 
 const Footer = () => {
   return (
     <footer className="position-relative" id="footer-main">
       <div className="footer pt-lg-7 footer-dark bg-dark">
         <div className="shape-container shape-line shape-position-top shape-orientation-inverse">
-          <svg width="2560px" height="100px" preserveAspectRatio="none" x="0px" y="0px" style={{ enableBackground: "new 0 0 2560 100" }}>
+          <svg
+            width="2560px"
+            height="100px"
+            preserveAspectRatio="none"
+            x="0px"
+            y="0px"
+            style={{ enableBackground: "new 0 0 2560 100" }}
+          >
             <polygon points="2560 0 2560 100 0 100"></polygon>
           </svg>
         </div>
@@ -16,10 +23,15 @@ const Footer = () => {
             <div className="col-lg-12">
               <div className="row align-items-center">
                 <div className="col-lg-7">
-                  <h3 className="text-secondary mb-2">Brilliant solutions for your ideas</h3>
-                  <p className="lead mb-0 text-white opacity-8">Build modern looking websites fast and easy using Quick.</p>
+                  <h2 className="text-secondary mb-2">
+                    O Descript é uma plataforma da Sondery
+                  </h2>
+                  <p className="lead mb-0 text-white opacity-8">
+                    Explicar aqui como a criação do Descript foi uma decisão da
+                    Sondery para melhorar a agilidade na prestação de serviços
+                    de descrição de imagem.
+                  </p>
                 </div>
-
               </div>
             </div>
           </div>
@@ -29,16 +41,24 @@ const Footer = () => {
               <a href="../../index.html">
                 <img src={logo} alt="Logo" />
               </a>
-              <p className="mt-4 text-sm opacity-8 pr-lg-4">O Descript tenta ofercer a melhor plataforma de audio descrição para seu negócio.</p>
+              <p className="mt-4 text-sm opacity-8 pr-lg-4">
+                O Descript tenta ofercer a melhor plataforma de audio descrição
+                para seu negócio.
+              </p>
               <ul className="nav mt-4">
-
                 <li className="nav-item">
-                  <a className="nav-link" href="https://www.instagram.com/sonderybr">
+                  <a
+                    className="nav-link"
+                    href="https://www.instagram.com/sonderybr"
+                  >
                     <i className="fab fa-instagram"></i>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="https://www.facebook.com/sonderybr">
+                  <a
+                    className="nav-link"
+                    href="https://www.facebook.com/sonderybr"
+                  >
                     <i className="fab fa-facebook"></i>
                   </a>
                 </li>
@@ -96,25 +116,33 @@ const Footer = () => {
           <hr className="divider divider-fade divider-dark my-4" />
           <div className="row align-items-center justify-content-md-between pb-4">
             <div className="col-md-6">
-              <div className="copyright text-sm font-weight-bold text-center text-md-left">© 2020 <a href="https://webpixels.io" className="font-weight-bold">Descript</a>. Todos direitos reservados</div>
+              <div className="copyright text-sm font-weight-bold text-center text-md-left">
+                © 2020{" "}
+                <a href="https://webpixels.io" className="font-weight-bold">
+                  Descript
+                </a>
+                . Todos direitos reservados
+              </div>
             </div>
             <div className="col-md-6">
               <ul className="nav justify-content-center justify-content-md-end mt-3 mt-md-0">
                 <li className="nav-item">
-                  <a className="nav-link" href="/">Termos</a>
+                  <a className="nav-link" href="/">
+                    Termos
+                  </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">Privacidade</a>
+                  <a className="nav-link" href="/">
+                    Privacidade
+                  </a>
                 </li>
-
               </ul>
             </div>
           </div>
         </div>
       </div>
     </footer>
+  );
+};
 
-  )
-}
-
-export default Footer
+export default Footer;
