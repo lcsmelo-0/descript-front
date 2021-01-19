@@ -21176,3 +21176,31 @@ Advanced example - Customized layout
       padding-right: 1.675rem; }
       .bootstrap-tagsinput .badge:hover [data-role="remove"] {
         opacity: 1; }
+
+
+.sticky {
+  width: 100%;
+  min-height: 6vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all .7s ease-in;
+}
+
+.scrolled{
+  position: fixed;
+}
+@media screen and ( max-width: 768px) {
+
+  .scrolled{
+    position: relative;
+  }
+
+}
+@media screen and ( max-width: 979px) {
+  .scrolled{
+    position: relative;
+  }
+
+}

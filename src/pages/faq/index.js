@@ -1,77 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Faq = () => {
+  const [scrolled, setScrolled] = useState(false)
+
+  const handleScroll = () => {
+    const offset = window.scrollY
+    if (offset > 200) {
+      setScrolled(true)
+    } else {
+      setScrolled(false)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+  })
+
+  let navbarClasses = ['sticky']
+  if (scrolled) {
+    navbarClasses.push('scrolled')
+  }
+
   return (
     <>
-      <section className="slice slice-lg bg-cover bg-size--cover">
-        <span className="mask bg-primary opacity-9"></span>
-        <div className="container pt-5">
-          <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <h2 className="mb-4 text-center text-white">How can we help?</h2>
-              <form>
-                <div className="form-group bg-neutral rounded-pill mb-0 px-2 py-2 shadow">
-                  <div className="row">
-                    <div className="col">
-                      <div className="input-group input-group-merge shadow-none">
-                        <div className="input-group-prepend">
-                          <span className="input-group-text bg-transparent border-0">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="1em"
-                              height="1em"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              className="feather feather-search"
-                            >
-                              <circle cx="11" cy="11" r="8"></circle>
-                              <line
-                                x1="21"
-                                y1="21"
-                                x2="16.65"
-                                y2="16.65"
-                              ></line>
-                            </svg>
-                          </span>
-                        </div>
-                        <input
-                          type="text"
-                          className="form-control form-control-flush shadow-none"
-                          placeholder="Search for answers ..."
-                        />
-                      </div>
-                    </div>
-                    <div className="col-auto">
-                      <button
-                        type="button"
-                        className="btn btn-block btn-dark rounded-pill"
-                      >
-                        Search
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div className="container position-relative zindex-100">
-          <div className="my-5 text-center">
-            <h6 className="text-white font-weight-light mb-0">
-              or choose a category to quickly find the answer you need
-            </h6>
-          </div>
-        </div>
-      </section>
       <section className="slice slice-lg" id="sct-faq">
         <div className="container">
           <div className="row row-grid">
             <div className="col-lg-3">
-              <div data-toggle="sticky" data-sticky-offset="50" className="">
+              <div data-toggle="sticky" data-sticky-offset="50" className={navbarClasses.join(" ")}>
                 <div className="card">
                   <div className="list-group list-group-flush">
                     <a
