@@ -1,7 +1,5 @@
 import { retry, put } from "redux-saga/effects";
 
-import { Creators as SubscriptionTypes } from "../ducks/subscription";
-
 import { iuguApi } from "../../../services/api";
 
 export function* subscriptionCreate(action) {

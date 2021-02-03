@@ -17,16 +17,15 @@ import {
 } from "reactstrap";
 
 import Spinner from "../../components/icons/Spinner";
-import Header from "../../components/Header";
 
-const Reviser = () => {
+const Reviser = props => {
   const dispatch = useDispatch();
 
   const { images, loading } = useSelector(state => state.image);
 
   useEffect(() => {
     dispatch(ImageActions.getImagesRequest());
-  }, []);
+  }, [props]);
 
   return (
     <>
