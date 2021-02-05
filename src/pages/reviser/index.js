@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import { connect, useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
 import { Creators as ImageActions } from "../../store/ducks/image";
@@ -22,10 +22,10 @@ const Reviser = props => {
   const dispatch = useDispatch();
 
   const { images, loading } = useSelector(state => state.image);
-
+  const stableDispatch = useCallback(dispatch, []);
   useEffect(() => {
     dispatch(ImageActions.getImagesRequest());
-  }, [props]);
+  }, [stableDispatch]);
 
   return (
     <>

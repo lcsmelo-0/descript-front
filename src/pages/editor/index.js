@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import { connect, useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
 import { Creators as ImageActions } from "../../store/ducks/image";
@@ -17,16 +17,15 @@ import {
 } from "reactstrap";
 
 import Spinner from "../../components/icons/Spinner";
-import Header from "../../components/Header";
 
 const Editor = () => {
   const dispatch = useDispatch();
-
+  const stableDispatch = useCallback(dispatch, []);
   const { images, loading } = useSelector(state => state.image);
 
   useEffect(() => {
     dispatch(ImageActions.getImagesRequest());
-  }, []);
+  }, [stableDispatch]);
 
   return (
     <>

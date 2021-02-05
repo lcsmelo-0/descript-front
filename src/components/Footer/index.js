@@ -25,11 +25,16 @@ const Footer = () => {
               <a href="../../index.html">
                 <img src={logo} alt="Logo" />
               </a>
-              <p className="mt-4 text-sm opacity-8 pr-lg-4">O Descript é uma plataforma acessível criada pela Sondery para oferecer um serviço de descrição de imagens feitas por profissionais com qualidade e agilidade.</p>
+              <p className="mt-4 text-sm opacity-8 pr-lg-4">
+                O Descript é uma plataforma acessível criada pela Sondery para
+                oferecer um serviço de descrição de imagens feitas por
+                profissionais com qualidade e agilidade.
+              </p>
               <ul className="nav mt-4">
                 <li className="nav-item">
                   <a
                     className="nav-link"
+                    rel="noopener noreferrer"
                     href="https://www.instagram.com/sonderybr"
                     target="_blank"
                   >
@@ -39,6 +44,7 @@ const Footer = () => {
                 <li className="nav-item">
                   <a
                     className="nav-link"
+                    rel="noopener noreferrer"
                     href="https://www.facebook.com/sondery"
                     target="_blank"
                   >

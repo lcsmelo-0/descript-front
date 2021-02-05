@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Creators as ImageActions } from "../../store/ducks/image";
@@ -19,10 +19,10 @@ const ClientForm = props => {
 
   const [image, setImage] = useState({ preview: "" });
   const { loading } = useSelector(state => state.image);
-
+  const stableDispatch = useCallback(dispatch, []);
   useEffect(() => {
     dispatch(ImageActions.getImagesRequest());
-  }, []);
+  }, [stableDispatch]);
 
   const handleImage = event => {
     const reader = new FileReader();

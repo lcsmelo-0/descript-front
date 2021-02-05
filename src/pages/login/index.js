@@ -85,7 +85,8 @@ class Login extends Component {
     signInRequest(usernameInput, passwordInput);
   };
 
-  showPassword = () => {
+  showPassword = e => {
+    e.preventDefault();
     this.setState({
       inputType: this.state.inputType === "password" ? "text" : "password"
     });
@@ -164,7 +165,7 @@ class Login extends Component {
                           </div>
                           <div className="mb-2">
                             <a
-                              href="#"
+                              href="/"
                               className="small text-muted text-underline--dashed border-primary"
                               onClick={this.showPassword}
                             >

@@ -47,7 +47,6 @@ export default class PaymentForm extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const { issuer } = this.state;
     const formData = [...e.target.elements]
       .filter(d => d.name)
       .reduce((acc, d) => {
@@ -65,7 +64,6 @@ export default class PaymentForm extends React.Component {
     return (
       <div key="Payment" className="container">
         <div className="App-payment">
-
           <Card
             number={number}
             name={name}
@@ -127,7 +125,9 @@ export default class PaymentForm extends React.Component {
             </div>
             <input type="hidden" name="issuer" value={issuer} />
             <div className="form-actions">
-              <button className="btn btn-primary btn-block">Finalizar Pagamento</button>
+              <button className="btn btn-primary btn-block">
+                Finalizar Pagamento
+              </button>
             </div>
           </form>
           {formData && (
@@ -137,7 +137,6 @@ export default class PaymentForm extends React.Component {
               ))}
             </div>
           )}
-         
         </div>
       </div>
     );
