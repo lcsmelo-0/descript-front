@@ -1,6 +1,6 @@
 import React from "react";
 
-import logo from "../../assets/img/logo.png";
+import logo from "../../assets/img/logo-branco.png";
 
 const Footer = () => {
   return (
@@ -19,37 +19,19 @@ const Footer = () => {
           </svg>
         </div>
         <div className="container pt-4">
-          <div className="row justify-content-center">
-            <div className="col-lg-12">
-              <div className="row align-items-center">
-                <div className="col-lg-7">
-                  <h2 className="text-secondary mb-2">
-                    O Descript é uma plataforma da Sondery
-                  </h2>
-                  <p className="lead mb-0 text-white opacity-8">
-                    Explicar aqui como a criação do Descript foi uma decisão da
-                    Sondery para melhorar a agilidade na prestação de serviços
-                    de descrição de imagem.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
           <hr className="divider divider-fade divider-dark my-5" />
           <div className="row">
             <div className="col-lg-4 mb-5 mb-lg-0">
               <a href="../../index.html">
                 <img src={logo} alt="Logo" />
               </a>
-              <p className="mt-4 text-sm opacity-8 pr-lg-4">
-                O Descript tenta ofercer a melhor plataforma de audio descrição
-                para seu negócio.
-              </p>
+              <p className="mt-4 text-sm opacity-8 pr-lg-4">O Descript é uma plataforma acessível criada pela Sondery para oferecer um serviço de descrição de imagens feitas por profissionais com qualidade e agilidade.</p>
               <ul className="nav mt-4">
                 <li className="nav-item">
                   <a
                     className="nav-link"
                     href="https://www.instagram.com/sonderybr"
+                    target="_blank"
                   >
                     <i className="fab fa-instagram"></i>
                   </a>
@@ -57,7 +39,8 @@ const Footer = () => {
                 <li className="nav-item">
                   <a
                     className="nav-link"
-                    href="https://www.facebook.com/sonderybr"
+                    href="https://www.facebook.com/sondery"
+                    target="_blank"
                   >
                     <i className="fab fa-facebook"></i>
                   </a>

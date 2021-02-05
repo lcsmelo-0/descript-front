@@ -13,14 +13,18 @@ import ClientForm from "../pages/clientForm";
 import Princing from "../pages/pricing";
 import Faq from "../pages/faq";
 import RegisterForm from "../pages/registerForm";
+import PaymentForm from "../pages/payment";
+import Whoami from "../pages/whoami";
 
 const Routes = () => (
   <Switch>
     <Route exact path="/" component={Home} />
     <Route exact path="/login" component={Login} />
-    <Route exact path="/pricing" component={Princing} />
-    <Route exact path="/faq" component={Faq} />
-    <Route exact path="/register" component={RegisterForm} />
+    <Route exact path="/plamos-e-precos" component={Princing} />
+    <Route exact path="/como-funciona" component={Faq} />
+    <Route exact path="/cadastrar" component={RegisterForm} />
+    <Route exact path="/quem-somos" component={Whoami} />
+    <Route exact path="/checkout" component={PaymentForm} />
     <PrivateRoute exact path="/editor" component={Editor} />
     <PrivateRoute exact path="/client" component={Client} />
     <PrivateRoute exact path="/reviser" component={Reviser} />
