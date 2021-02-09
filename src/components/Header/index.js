@@ -74,7 +74,7 @@ const Header = () => {
               >
                 <a
                   className="nav-link"
-                  href="/pricing"
+                  href="/planos-e-preco"
                   role="button"
                   dataToggle="dropdown"
                   aria-haspopup="true"
@@ -89,13 +89,28 @@ const Header = () => {
               >
                 <a
                   className="nav-link"
-                  href="/faq"
+                  href="/como-funciona"
                   role="button"
                   dataToggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
                   Como funciona
+                </a>
+              </li>
+              <li
+                className="nav-item nav-item-spaced dropdown dropdown-animate"
+                dataToggle="hover"
+              >
+                <a
+                  className="nav-link"
+                  href="/quem-somos"
+                  role="button"
+                  dataToggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Quem somos
                 </a>
               </li>
               <li
