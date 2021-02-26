@@ -74,7 +74,7 @@ const Header = () => {
               >
                 <a
                   className="nav-link"
-                  href="/planos-e-preco"
+                  href="/planos-e-precos"
                   role="button"
                   dataToggle="dropdown"
                   aria-haspopup="true"
