@@ -3,9 +3,11 @@ import React from 'react'
 const Whoami = () => {
   return(
     <div className="container">
-      <h1>O Descript surgiu da ideia de deixar a acessibilidade mais acessível.</h1>
+      <div className="hero">
+        <h1>O Descript surgiu da ideia de deixar a acessibilidade mais acessível.</h1>
+      </div>
 
-      <div className="columns">
+      <div className="columns colunas">
         <p><b className="initial">N</b>ós queríamos uma solução para agilizar e automatizar nosso serviço de descrição de imagens. Sabe, que o cliente pudesse entrar em nosso site e contratar o plano que melhor lhe servisse, sem muitas etapas ou burocracias – pudesse finalizar a compra no cartão de crédito ou boleto e já sair usando</p>
         <p>A ideia surgiu da necessidade dos nossos clientes e consultores e no nosso desejo de utilizar a tecnologia a serviço da acessibilidade. Um sistema para unificar todos os nossos trabalhos e agilizar os nossos processos.</p>
         <p>O Descript é uma plataforma criada pela Sondery, Acessibilidade Criativa, e está em constante desenvolvimento. Isso tudo o que você vê aqui é apenas o começo, pode apostar.</p>
@@ -25,6 +27,9 @@ const Whoami = () => {
         <div className="banner col-md-3">
           <h2>Nossos Valores</h2>
           <h3>A cultura da acessibilidade e as nossas motivações</h3>
+          <div className="img-replace">
+
+          </div>
         </div>
         <div className="textos col-md-8 row d-flex">
           <div className="col-md-6">
