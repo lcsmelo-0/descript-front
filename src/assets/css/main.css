@@ -21537,7 +21537,7 @@ Advanced example - Customized layout
   background-color: var(--indigo);
 
 }
-.terms h1 {
+.container  h1 {
   text-align: center;
 }
 ol.ol-aphabetical{list-style-type: lower-latin;}
