@@ -18,17 +18,23 @@ const Footer = () => {
             <polygon points="2560 0 2560 100 0 100"></polygon>
           </svg>
         </div>
+        <div className="container">
+            <h2>
+            O Descript é uma plataforma da Sondery
+            </h2>
+            <p>
+            Explicar aqui como a criação do Descript foi uma decisão da Sondery para melhorar a agilidade na prestação de serviços de descrição de imagem.
+            </p>
+          </div>
         <div className="container pt-4">
           <hr className="divider divider-fade divider-dark my-5" />
           <div className="row">
             <div className="col-lg-4 mb-5 mb-lg-0">
-              <a href="../../index.html">
+              <a href="index.html">
                 <img src={logo} alt="Logo" />
               </a>
               <p className="mt-4 text-sm opacity-8 pr-lg-4">
-                O Descript é uma plataforma acessível criada pela Sondery para
-                oferecer um serviço de descrição de imagens feitas por
-                profissionais com qualidade e agilidade.
+              O Descript tenta oferecer a melhor plataforma de audio descrição para o seu negócio.
               </p>
               <ul className="nav mt-4">
                 <li className="nav-item">
@@ -106,7 +112,7 @@ const Footer = () => {
           <div className="row align-items-center justify-content-md-between pb-4">
             <div className="col-md-6">
               <div className="copyright text-sm font-weight-bold text-center text-md-left">
-                © 2020{" "}
+                © 2021{" "}
                 <a href="https://webpixels.io" className="font-weight-bold">
                   Descript
                 </a>

@@ -1,5 +1,7 @@
 import React from "react"
-import { Router } from "react-router-dom"
+// import { Router } from "react-router-dom"
+import { HashRouter as Router } from 'react-router-dom'
+
 
 import history from "./services/history"
 import Routes from "./routes"
@@ -16,7 +18,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <Router history={history}>
+      <Router basename={process.env.PUBLIC_URL} >
         <Routes />
       </Router>
       <Footer />

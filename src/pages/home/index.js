@@ -7,6 +7,8 @@ import skateGuy from "../../assets/img/illustration-5.svg";
 import boardCouple from "../../assets/img/illustration-6.svg";
 import sportCouple from "../../assets/img/illustration-7.svg";
 
+import './home.css'
+
 export default class Home extends Component {
   render() {
     return (
@@ -35,7 +37,7 @@ export default class Home extends Component {
             </Row>
           </Container>
         </section>
-        <section className="slice py-5 py-lg-7">
+        <section className="slice py-5 py-lg-7 no-padding-top">
           <Container>
             <Row className="row row-grid align-items-center">
               <Col className="col-12 col-md-5 col-lg-6 order-md-2">
@@ -64,16 +66,14 @@ export default class Home extends Component {
         </section>
         <section className="slice slice-lg pt-lg-6 pb-0 pb-lg-6">
           <Container>
-            <Row className="justify-content-lg-end">
+            <Row className="beneficios">
               <Col className="col-lg-5 text-lg-right">
-                <p className="lh-180 mb-3">
-                  Com o Descript você conta com os melhores profissionais do
-                  mercado para deixar os conteúdos da sua equipe de criação
-                  acessívei
+                <p className="lh-180 mb-3 beneficios__texto">
+                Com o Descript você conta com os melhores profissionais do mercado para deixar os conteúdos da sua equipe de criação acessíveis.
                 </p>
               </Col>
               <Col className="col-lg-6">
-                <h2 className="display-4 lh-130">
+                <h2 className="display-4 lh-130 beneficios__titulo">
                   Os benefícios de utilizar o Descript
                 </h2>
               </Col>

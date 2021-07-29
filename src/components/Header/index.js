@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assets/img/logo.png";
-
+import {Link, HashRouter}from'react-router-dom'
 import { excludeData } from "../../services/auth";
 
 const Header = () => {
@@ -18,15 +18,16 @@ const Header = () => {
   };
 
   return (
-    <header className="" id="header-main">
+    <HashRouter>
+<header className="" id="header-main">
       <nav
         className="navbar navbar-main navbar-expand-lg navbar-light"
         id="navbar-main"
       >
         <div className="container">
-          <a className="navbar-brand" href="/">
+          <Link className="navbar-brand" to="/">
             <img src={logo} alt="Logo do descript" />
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -72,71 +73,71 @@ const Header = () => {
                 className="nav-item nav-item-spaced dropdown dropdown-animate"
                 dataToggle="hover"
               >
-                <a
+                <Link
                   className="nav-link"
-                  href="/planos-e-precos"
+                  to="/planos-e-precos"
                   role="button"
                   dataToggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
                   Planos e preços
-                </a>
+                </Link>
               </li>
               <li
                 className="nav-item nav-item-spaced dropdown dropdown-animate"
                 dataToggle="hover"
               >
-                <a
+                <Link
                   className="nav-link"
-                  href="/como-funciona"
+                  to="/como-funciona"
                   role="button"
                   dataToggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
                   Como funciona
-                </a>
+                </Link>
               </li>
               <li
                 className="nav-item nav-item-spaced dropdown dropdown-animate"
                 dataToggle="hover"
               >
-                <a
+                <Link
                   className="nav-link"
-                  href="/quem-somos"
+                  to="/quem-somos"
                   role="button"
                   dataToggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
                   Quem somos
-                </a>
+                </Link>
               </li>
               <li
                 className="nav-item nav-item-spaced dropdown dropdown-animate"
                 dataToggle="hover"
               >
-                <a
+                <Link
                   className="nav-link"
-                  href="/termos"
+                  to="/termos"
                   role="button"
                   dataToggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
                   Termos
-                </a>
+                </Link>
               </li>
             </ul>
             <ul className="navbar-nav align-items-lg-center d-none d-lg-flex ml-lg-auto">
               <li className="nav-item">
                 {localStorage.getItem("front-descript") ? (
-                  <a href="/logout" onClick={logout}>
+                  <Link to="/logout" onClick={logout}>
                     Logout
-                  </a>
+                  </Link>
                 ) : (
-                  <a href="/login">Login</a>
+                  <Link to="/login">Login</Link>
                 )}
               </li>
             </ul>
@@ -144,6 +145,8 @@ const Header = () => {
         </div>
       </nav>
     </header>
+    </HashRouter>
+    
   );
 };
 
