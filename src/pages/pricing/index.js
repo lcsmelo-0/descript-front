@@ -97,9 +97,9 @@ const Princing = () => {
         </div>
 
         <div class="mt-5 text-center">
-          <p class="mb-2">Para planos personalizados e tal, entre em contato.</p>
+          <p class="mb-2">Precisa de ajuda para escolher o seu plano?</p>
           <a href="/" class="text-primary text-underline--dashed">
-            Fale com um consultor
+            Entre em contato
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1em"

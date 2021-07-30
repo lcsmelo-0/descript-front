@@ -1,0 +1,130 @@
+.howItWorks h1 {
+  margin-bottom: 50px;
+}
+
+.howItWorks .howItWorks__line__text h2 {
+  align-self: flex-start;
+}
+
+.howItWorks h2 span {
+  color: aqua;
+}
+
+.howItWorks__line {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+  .howItWorks__line {
+    flex-direction: column;
+  }
+
+  .howItWorks__line div {
+    width: 100%;
+  }
+}
+
+.howItWorks__line div {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 48%;
+}
+
+.howItWorks__line .howItWorks__line__text {
+  width: 40%;
+}
+
+.howItWorks__line img {
+  max-width: 80%;
+}
+
+.howItWorks__centerLine {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 70px 0;
+}
+
+.howItWorks__centerLine > p {
+  max-width: 75%;
+  text-align: center;
+}
+
+.howItWorks__centerLine > img {
+  max-height: 300px;
+}
+
+.howItWorks__centerLine button {
+  border: none;
+  border-radius: 20px;
+  background-color: #4353ff;
+  color: white;
+  padding: 5px 15px;
+}
+
+.howItWorks__twoColumns {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.howItWorks__twoColumns div {
+  width: 40%;
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 0 70px;
+}
+
+.icons .iconContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  height: 120px;
+}
+
+.icons .iconContainer div {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icons .iconContainer div i {
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .howItWorks__line {
+    flex-direction: column;
+  }
+
+  .howItWorks__line__text,
+  .howItWorks__line div {
+    max-width: 100%;
+    width: 100% !important;
+  }
+
+  .howItWorks__twoColumns {
+    flex-direction: column;
+  }
+
+  .howItWorks__twoColumns div {
+    width: 100%;
+  }
+
+  .icons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

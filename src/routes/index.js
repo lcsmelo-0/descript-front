@@ -11,7 +11,7 @@ import Home from '../pages/home'
 import Detail from '../pages/detail'
 import ClientForm from '../pages/clientForm'
 import Princing from '../pages/pricing'
-import Faq from '../pages/faq'
+import HowItWorks from '../pages/HowItWorks'
 import RegisterForm from '../pages/registerForm'
 import PaymentForm from '../pages/payment'
 import Whoami from '../pages/whoami'
@@ -22,7 +22,7 @@ const Routes = () => (
     <Route exact path="/" component={Home} />
     <Route exact path="/login" component={Login} />
     <Route exact path="/planos-e-precos" component={Princing} />
-    <Route exact path="/como-funciona" component={Faq} />
+    <Route exact path="/como-funciona" component={HowItWorks} />
     <Route exact path="/cadastrar" component={RegisterForm} />
     <Route exact path="/quem-somos" component={Whoami} />
     <Route exact path="/checkout" component={PaymentForm} />
