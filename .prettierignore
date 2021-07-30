@@ -11,3 +11,5 @@ coverage
 .npmrc
 .github
 .next
+./src\assets\css\black-dashboard-react.css
+*.yml

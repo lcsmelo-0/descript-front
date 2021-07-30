@@ -1,6 +1,7 @@
 import React from 'react'
 
 import logo from '../../assets/img/logo-branco.png'
+import './footer.css'
 
 const Footer = () => {
   return (
@@ -19,10 +20,10 @@ const Footer = () => {
           </svg>
         </div>
         <div className="container">
-          <h2>O Descript é uma plataforma da Sondery</h2>
+          <h2 className="teste">O Descript é uma plataforma da Sondery</h2>
           <p>
-            Explicar aqui como a criação do Descript foi uma decisão da Sondery para melhorar a agilidade na prestação
-            de serviços de descrição de imagem.
+            Nós criamos uma plataforma de tecnologia para agilizar e automatizar todos os processos de contratação,
+            criação e aprovação de audiodescrições, que são feitas pelos melhores profissionais do mercado.
           </p>
         </div>
         <div className="container pt-4">

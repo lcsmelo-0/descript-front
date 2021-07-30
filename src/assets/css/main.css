@@ -4729,8 +4729,7 @@ input[type='button'].btn-block {
 }
 
 .card-body {
-  flex: 1 1 auto;
-  min-height: 1px;
+  min-height: 550px;
   padding: 1.75rem;
   color: #718096;
 }
