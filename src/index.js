@@ -13,8 +13,8 @@ import App from './App'
 ReactDOM.render(
   <Provider store={storeConfig.store}>
     <PersistGate persistor={storeConfig.persistor}>
-    <Router basename={process.env.PUBLIC_URL}>
-      <App />
+      <Router basename={process.env.PUBLIC_URL}>
+        <App />
       </Router>
     </PersistGate>
   </Provider>,

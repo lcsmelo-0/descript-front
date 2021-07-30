@@ -14,7 +14,7 @@ import Princing from '../pages/pricing'
 import HowItWorks from '../pages/HowItWorks'
 import RegisterForm from '../pages/registerForm'
 import PaymentForm from '../pages/payment'
-import Whoami from '../pages/whoami'
+import WhoWeAre from '../pages/WhoWeAre'
 import Terms from '../pages/terms'
 
 const Routes = () => (
@@ -24,7 +24,7 @@ const Routes = () => (
     <Route exact path="/planos-e-precos" component={Princing} />
     <Route exact path="/como-funciona" component={HowItWorks} />
     <Route exact path="/cadastrar" component={RegisterForm} />
-    <Route exact path="/quem-somos" component={Whoami} />
+    <Route exact path="/quem-somos" component={WhoWeAre} />
     <Route exact path="/checkout" component={PaymentForm} />
     <Route exact path="/termos" component={Terms} />
     <PrivateRoute exact path="/editor" component={Editor} />

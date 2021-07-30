@@ -1,17 +1,19 @@
 import React from 'react'
 
-const Whoami = () => {
+import './whoWeAre.css'
+
+const WhoWeAre = () => {
   return (
     <div className="container">
       <div className="hero">
         <h1>O Descript surgiu da ideia de deixar a acessibilidade mais acessível.</h1>
       </div>
 
-      <div className="columns colunas">
+      <div className="columns">
         <p>
-          <b className="initial">N</b>ós queríamos uma solução para agilizar e automatizar nosso serviço de descrição de
-          imagens. Sabe, que o cliente pudesse entrar em nosso site e contratar o plano que melhor lhe servisse, sem
-          muitas etapas ou burocracias – pudesse finalizar a compra no cartão de crédito ou boleto e já sair usando
+          <span>N</span>ós queríamos uma solução para agilizar e automatizar nosso serviço de descrição de imagens.
+          Sabe, que o cliente pudesse entrar em nosso site e contratar o plano que melhor lhe servisse, sem muitas
+          etapas ou burocracias – pudesse finalizar a compra no cartão de crédito ou boleto e já sair usando
         </p>
         <p>
           A ideia surgiu da necessidade dos nossos clientes e consultores e no nosso desejo de utilizar a tecnologia a
@@ -22,7 +24,7 @@ const Whoami = () => {
           Isso tudo o que você vê aqui é apenas o começo, pode apostar.
         </p>
       </div>
-      <div className="row col-md-9 porque-criamos">
+      <div id="column" className="columns marginColumn">
         <h2>Por que criamos o Descript?</h2>
         <h3>Facilitar a aquisição de serviços de acessibilidade</h3>
         <p>
@@ -94,4 +96,4 @@ const Whoami = () => {
   )
 }
 
-export default Whoami
+export default WhoWeAre

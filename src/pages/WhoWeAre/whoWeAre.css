@@ -1,0 +1,19 @@
+.columns p span {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.marginColumn {
+  margin: 80px 0;
+}
+
+@media (max-width: 1024px) {
+  #column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #column h3 {
+    margin-top: 0;
+  }
+}
