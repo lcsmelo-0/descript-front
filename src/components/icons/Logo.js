@@ -2,7 +2,8 @@ import React from 'react'
 
 const Logo = () => {
   return (
-    <svg version="1.1"
+    <svg
+      version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       xmlns="http://www.w3.org/1999/xlink"
@@ -11,8 +12,15 @@ const Logo = () => {
       width="190px"
       height="114px"
       viewBox="0 0 190 114"
-      enable-background="new 0 0 190 114" xml="preserve">
-      <image id="image0" width="190" height="114" x="0" y="0"
+      enable-background="new 0 0 190 114"
+      xml="preserve"
+    >
+      <image
+        id="image0"
+        width="190"
+        height="114"
+        x="0"
+        y="0"
         xlink="data:image/pngbase64,iVBORw0KGgoAAAANSUhEUgAAAL4AAAByCAYAAADtXmtSAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
 AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAA
 B3RJTUUH5AUTEQkq3NA/7QAAFedJREFUeNrtnXl4VNXZwH/vnSEkhE02F1xw+766VlzqSs0kQak7
@@ -115,9 +123,9 @@ Fsl+83JpIg/1B2Oq0zBgCet7XcZdR2ddhcPxddj6dMcx8S542oOkt4ZbvoFcjuiLHhruz7renzvB
 dzgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+Fw
 OBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HN9W/h/spfZhfr2xDgAAACV0RVh0
 ZGF0ZTpjcmVhdGUAMjAyMC0wNS0yMFQwNDoxMDoyMSswMzowMBH6bf4AAAAldEVYdGRhdGU6bW9k
-aWZ5ADIwMjAtMDUtMjBUMDQ6MTA6MjErMDM6MDBgp9VCAAAAAElFTkSuQmCC" />
+aWZ5ADIwMjAtMDUtMjBUMDQ6MTA6MjErMDM6MDBgp9VCAAAAAElFTkSuQmCC"
+      />
     </svg>
-
   )
 }
 

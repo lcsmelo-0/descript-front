@@ -1,21 +1,21 @@
-import axios from "axios";
-import { setAuthorization } from "./auth";
+import axios from 'axios'
+import { setAuthorization } from './auth'
 
 const {
   // NODE_ENV,
   REACT_APP_DEV_BASEURL,
   REACT_APP_DESCRIPT_API,
-  REACT_APP_IUGU_API
-} = process.env;
+  REACT_APP_IUGU_API,
+} = process.env
 
-const isProd = true;
+const isProd = true
 
 export const descriptApi = axios.create({
-  baseURL: isProd ? REACT_APP_DESCRIPT_API : REACT_APP_DEV_BASEURL
-});
+  baseURL: isProd ? REACT_APP_DESCRIPT_API : REACT_APP_DEV_BASEURL,
+})
 
 export const iuguApi = axios.create({
-  baseURL: isProd ? REACT_APP_IUGU_API : REACT_APP_DEV_BASEURL
-});
+  baseURL: isProd ? REACT_APP_IUGU_API : REACT_APP_DEV_BASEURL,
+})
 
-descriptApi.interceptors.request.use(async config => setAuthorization(config));
+descriptApi.interceptors.request.use(async config => setAuthorization(config))

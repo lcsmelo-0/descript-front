@@ -1,12 +1,12 @@
-import { all, takeLatest } from "redux-saga/effects";
+import { all, takeLatest } from 'redux-saga/effects'
 
-import { Types as UserTypes } from "../ducks/user";
-import { Types as ImageTypes } from "../ducks/image";
-import { Types as WorkflowTypes } from "../ducks/workflow";
+import { Types as UserTypes } from '../ducks/user'
+import { Types as ImageTypes } from '../ducks/image'
+import { Types as WorkflowTypes } from '../ducks/workflow'
 
-import { signIn } from "./user";
-import { getImage, getImages, setImage } from "./image";
-import { updateWorkflowStatus, approveWorkflow } from "./workflow";
+import { signIn } from './user'
+import { getImage, getImages, setImage } from './image'
+import { updateWorkflowStatus, approveWorkflow } from './workflow'
 
 export default function* rootSaga() {
   yield all([
@@ -19,10 +19,7 @@ export default function* rootSaga() {
     takeLatest(ImageTypes.SET_IMAGE_REQUEST, setImage),
 
     //Workflow
-    takeLatest(
-      WorkflowTypes.UPDATE_WORKFLOW_STATUS_REQUEST,
-      updateWorkflowStatus
-    ),
-    takeLatest(WorkflowTypes.APPROVE_WORKFLOW_REQUEST, approveWorkflow)
-  ]);
+    takeLatest(WorkflowTypes.UPDATE_WORKFLOW_STATUS_REQUEST, updateWorkflowStatus),
+    takeLatest(WorkflowTypes.APPROVE_WORKFLOW_REQUEST, approveWorkflow),
+  ])
 }

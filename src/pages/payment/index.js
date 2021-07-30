@@ -1,65 +1,60 @@
-import React from "react";
-import Card from "react-credit-cards";
+import React from 'react'
+import Card from 'react-credit-cards'
 
-import {
-  formatCreditCardNumber,
-  formatCVC,
-  formatExpirationDate,
-  formatFormData
-} from "../../utils/creditCard";
+import { formatCreditCardNumber, formatCVC, formatExpirationDate, formatFormData } from '../../utils/creditCard'
 
-import "react-credit-cards/es/styles-compiled.css";
+import 'react-credit-cards/es/styles-compiled.css'
 
 export default class PaymentForm extends React.Component {
   state = {
-    number: "",
-    name: "",
-    expiry: "",
-    cvc: "",
-    issuer: "",
-    focused: "",
-    formData: null
-  };
+    number: '',
+    name: '',
+    expiry: '',
+    cvc: '',
+    issuer: '',
+    focused: '',
+    formData: null,
+  }
 
   handleCallback = ({ issuer }, isValid) => {
     if (isValid) {
-      this.setState({ issuer });
+      this.setState({ issuer })
     }
-  };
+  }
 
   handleInputFocus = ({ target }) => {
     this.setState({
-      focused: target.name
-    });
-  };
+      focused: target.name,
+    })
+  }
 
   handleInputChange = ({ target }) => {
-    if (target.name === "number") {
-      target.value = formatCreditCardNumber(target.value);
-    } else if (target.name === "expiry") {
-      target.value = formatExpirationDate(target.value);
-    } else if (target.name === "cvc") {
-      target.value = formatCVC(target.value);
+    if (target.name === 'number') {
+      target.value = formatCreditCardNumber(target.value)
+    } else if (target.name === 'expiry') {
+      target.value = formatExpirationDate(target.value)
+    } else if (target.name === 'cvc') {
+      target.value = formatCVC(target.value)
     }
 
-    this.setState({ [target.name]: target.value });
-  };
+    this.setState({ [target.name]: target.value })
+  }
 
   handleSubmit = e => {
-    e.preventDefault();
+    e.preventDefault()
     const formData = [...e.target.elements]
       .filter(d => d.name)
       .reduce((acc, d) => {
-        acc[d.name] = d.value;
-        return acc;
-      }, {});
+        acc[d.name] = d.value
+        return acc
+      }, {})
 
-    this.setState({ formData });
-    this.form.reset();
-  };
+    this.setState({ formData })
+    this.form.reset()
+  }
 
   render() {
-    const { name, number, expiry, cvc, focused, issuer, formData } = this.state;
+    const { name, number, expiry, cvc, focused, issuer, formData } = this.state
 
     return (
       <div key="Payment" className="container">
@@ -125,9 +120,7 @@ export default class PaymentForm extends React.Component {
             </div>
             <input type="hidden" name="issuer" value={issuer} />
             <div className="form-actions">
-              <button className="btn btn-primary btn-block">
-                Finalizar Pagamento
-              </button>
+              <button className="btn btn-primary btn-block">Finalizar Pagamento</button>
             </div>
           </form>
           {formData && (
@@ -139,6 +132,6 @@ export default class PaymentForm extends React.Component {
           )}
         </div>
       </div>
-    );
+    )
   }
 }

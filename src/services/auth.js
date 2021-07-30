@@ -1,7 +1,6 @@
-export const LOCAL_KEY = "front-descript"
+export const LOCAL_KEY = 'front-descript'
 
-export const getLocalObj = key =>
-  JSON.parse(localStorage.getItem(key)) || { user: {} }
+export const getLocalObj = key => JSON.parse(localStorage.getItem(key)) || { user: {} }
 
 export const getToken = () => getLocalObj(LOCAL_KEY).access_token
 
@@ -11,8 +10,7 @@ export const getUserName = () => getLocalObj(LOCAL_KEY).user.name
 
 export const getUserEmail = () => getLocalObj(LOCAL_KEY).user.email
 
-export const getUserEmailVerified = () =>
-  getLocalObj(LOCAL_KEY).user.email_verified_at
+export const getUserEmailVerified = () => getLocalObj(LOCAL_KEY).user.email_verified_at
 
 export const getUserClientId = () => getLocalObj(LOCAL_KEY).user.client_id
 
@@ -36,7 +34,7 @@ export const persistData = data => {
 
 export const excludeData = () => {
   localStorage.removeItem(LOCAL_KEY)
-  localStorage.removeItem("persist:front-descript")
+  localStorage.removeItem('persist:front-descript')
 }
 
 export const setAuthorization = async config => {

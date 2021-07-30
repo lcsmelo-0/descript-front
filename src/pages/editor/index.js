@@ -1,7 +1,7 @@
-import React, { useEffect, useCallback } from "react";
-import { connect, useDispatch, useSelector } from "react-redux";
-import { bindActionCreators } from "redux";
-import { Creators as ImageActions } from "../../store/ducks/image";
+import React, { useEffect, useCallback } from 'react'
+import { connect, useDispatch, useSelector } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { Creators as ImageActions } from '../../store/ducks/image'
 import {
   Card,
   CardBody,
@@ -13,19 +13,19 @@ import {
   Col,
   Container,
   Badge,
-  CardFooter
-} from "reactstrap";
+  CardFooter,
+} from 'reactstrap'
 
-import Spinner from "../../components/icons/Spinner";
+import Spinner from '../../components/icons/Spinner'
 
 const Editor = () => {
-  const dispatch = useDispatch();
-  const stableDispatch = useCallback(dispatch, []);
-  const { images, loading } = useSelector(state => state.image);
+  const dispatch = useDispatch()
+  const stableDispatch = useCallback(dispatch, [])
+  const { images, loading } = useSelector(state => state.image)
 
   useEffect(() => {
-    dispatch(ImageActions.getImagesRequest());
-  }, [stableDispatch]);
+    dispatch(ImageActions.getImagesRequest())
+  }, [stableDispatch])
 
   return (
     <>
@@ -56,28 +56,18 @@ const Editor = () => {
                           )}
                         </CardHeader>
                         <CardBody>
-                          <CardImg
-                            src={img.file}
-                            top
-                            width="100%"
-                            alt={img.name}
-                          />
+                          <CardImg src={img.file} top width="100%" alt={img.name} />
                           <CardTitle>{img.name}</CardTitle>
                           {img.texts ? (
                             <>
-                              <CardText>
-                                {img.texts[img.texts.length - 1].text}
-                              </CardText>
+                              <CardText>{img.texts[img.texts.length - 1].text}</CardText>
                             </>
                           ) : (
                             <></>
                           )}
                         </CardBody>
                         <CardFooter>
-                          <a
-                            href={`/detail/${img.id}`}
-                            className="btn btn-primary"
-                          >
+                          <a href={`/detail/${img.id}`} className="btn btn-primary">
                             Editar
                           </a>
                         </CardFooter>
@@ -85,19 +75,18 @@ const Editor = () => {
                     </Col>
                   )}
                 </>
-              );
+              )
             })}
           </Row>
         </Container>
       )}
     </>
-  );
-};
+  )
+}
 const mapStateToProps = state => ({
-  image: state.image
-});
+  image: state.image,
+})
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators({ ...ImageActions }, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators({ ...ImageActions }, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(Editor);
+export default connect(mapStateToProps, mapDispatchToProps)(Editor)

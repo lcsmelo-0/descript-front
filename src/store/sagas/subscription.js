@@ -1,6 +1,6 @@
-import { retry, put } from "redux-saga/effects";
+import { retry, put } from 'redux-saga/effects'
 
-import { iuguApi } from "../../../services/api";
+import { iuguApi } from '../../../services/api'
 
 export function* subscriptionCreate(action) {
   const requestBody = {
@@ -9,20 +9,14 @@ export function* subscriptionCreate(action) {
     notes: action.data.notes,
     phone: action.data.phone,
     cpf_cnpj: action.data.cnpj,
-    street: action.data.address
-  };
+    street: action.data.address,
+  }
 
   try {
-    const response = yield retry(
-      2,
-      1000,
-      iuguApi.post,
-      "customers",
-      requestBody
-    );
+    const response = yield retry(2, 1000, iuguApi.post, 'customers', requestBody)
 
-    console.log(response);
+    console.log(response)
   } catch (e) {
-    yield put();
+    yield put()
   }
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const Princing = () => {
   return (
@@ -9,8 +9,7 @@ const Princing = () => {
             <h2 class="mt-4">Simples e prático</h2>
             <div class="mt-2">
               <p class="lead lh-180">
-                Comece a utilizar os serviços do Descript hoje mesmo, escolhendo
-                um de nossos planos abaixo.
+                Comece a utilizar os serviços do Descript hoje mesmo, escolhendo um de nossos planos abaixo.
               </p>
             </div>
           </div>
@@ -98,9 +97,7 @@ const Princing = () => {
         </div>
 
         <div class="mt-5 text-center">
-          <p class="mb-2">
-            Para planos personalizados e tal, entre em contato.
-          </p>
+          <p class="mb-2">Para planos personalizados e tal, entre em contato.</p>
           <a href="/" class="text-primary text-underline--dashed">
             Fale com um consultor
             <svg
@@ -122,7 +119,7 @@ const Princing = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Princing;
+export default Princing

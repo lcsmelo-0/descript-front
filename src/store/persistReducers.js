@@ -6,9 +6,9 @@ export default reducers => {
     {
       key: 'front-descript',
       storage,
-      whitelist: ['user']
+      whitelist: ['user'],
     },
-    reducers
+    reducers,
   )
 
   return persistedReducer

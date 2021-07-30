@@ -1,11 +1,11 @@
-import React from "react";
-import { Wizard, Steps, Step, Navigation } from "react-hooks-multi-step-wizard";
-import { Input, Label } from "reactstrap";
+import React from 'react'
+import { Wizard, Steps, Step, Navigation } from 'react-hooks-multi-step-wizard'
+import { Input, Label } from 'reactstrap'
 
-import UseForms from "../../utils/useForms";
+import UseForms from '../../utils/useForms'
 
 const RegisterForm = () => {
-  const { inputs, change } = UseForms();
+  const { inputs, change } = UseForms()
   return (
     <div className="container">
       <Wizard>
@@ -13,21 +13,11 @@ const RegisterForm = () => {
           <Step>
             <div>
               <Label for="name">Nome completo</Label>
-              <Input
-                type="text"
-                value={inputs.name}
-                name="name"
-                onChange={change}
-              />
+              <Input type="text" value={inputs.name} name="name" onChange={change} />
             </div>
             <div>
               <Label for="email">Email</Label>
-              <Input
-                type="text"
-                value={inputs.email}
-                name="email"
-                onChange={change}
-              />
+              <Input type="text" value={inputs.email} name="email" onChange={change} />
             </div>
             <div>
               <Label>Telefone</Label>
@@ -80,7 +70,7 @@ const RegisterForm = () => {
         <Navigation />
       </Wizard>
     </div>
-  );
-};
+  )
+}
 
-export default RegisterForm;
+export default RegisterForm

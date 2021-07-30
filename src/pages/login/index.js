@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { Redirect } from "react-router-dom";
-import * as Yup from "yup";
-import { Container, Col } from "reactstrap";
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { Redirect } from 'react-router-dom'
+import * as Yup from 'yup'
+import { Container, Col } from 'reactstrap'
 
-import Spinner from "../../components/icons/Spinner";
+import Spinner from '../../components/icons/Spinner'
 
 import {
   LOCAL_KEY,
@@ -23,29 +23,29 @@ import {
   getUserDeletedAt,
   getUserType,
   getAccessTokenExpiration,
-  excludeData
-} from "../../services/auth";
+  excludeData,
+} from '../../services/auth'
 
-import { Creators as UserActions } from "../../store/ducks/user";
+import { Creators as UserActions } from '../../store/ducks/user'
 
 const schema = Yup.object().shape({
-  username: Yup.string().required("Campo obrigatório"),
-  password: Yup.string().required("Campo obrigatório")
-});
+  username: Yup.string().required('Campo obrigatório'),
+  password: Yup.string().required('Campo obrigatório'),
+})
 class Login extends Component {
   state = {
-    usernameInput: "",
-    passwordInput: "",
+    usernameInput: '',
+    passwordInput: '',
     refreshToken: false,
-    inputType: "password"
-  };
+    inputType: 'password',
+  }
 
   componentDidMount() {
     const {
       user: { loggedIn },
       signInSuccess,
-      signOut
-    } = this.props;
+      signOut,
+    } = this.props
 
     if (getLocalObj(LOCAL_KEY) && !loggedIn) {
       if (getToken()) {
@@ -62,48 +62,48 @@ class Login extends Component {
             editor_id: getUserEditorId(),
             created_at: getUserCreatedAt(),
             updated_at: getUserUpdatedAt(),
-            deleted_at: getUserDeletedAt()
+            deleted_at: getUserDeletedAt(),
           },
           userType: {
             isClient: getUserType().isClient,
             isEditor: getUserType().isEditor,
-            isReviser: getUserType().isReviser
-          }
-        };
-        signInSuccess(data, false);
+            isReviser: getUserType().isReviser,
+          },
+        }
+        signInSuccess(data, false)
       } else {
-        excludeData();
-        signOut();
+        excludeData()
+        signOut()
       }
     }
   }
 
   handleLogin = event => {
-    event.preventDefault();
-    const { usernameInput, passwordInput } = this.state;
-    const { signInRequest } = this.props;
-    signInRequest(usernameInput, passwordInput);
-  };
+    event.preventDefault()
+    const { usernameInput, passwordInput } = this.state
+    const { signInRequest } = this.props
+    signInRequest(usernameInput, passwordInput)
+  }
 
   showPassword = e => {
-    e.preventDefault();
+    e.preventDefault()
     this.setState({
-      inputType: this.state.inputType === "password" ? "text" : "password"
-    });
-  };
+      inputType: this.state.inputType === 'password' ? 'text' : 'password',
+    })
+  }
 
   render() {
     const {
       user: {
         loading,
         loggedIn,
-        userType: { isClient, isEditor, isReviser }
-      }
-    } = this.props;
+        userType: { isClient, isEditor, isReviser },
+      },
+    } = this.props
 
-    if (loggedIn && isClient) return <Redirect from="/login" to="/client" />;
-    if (loggedIn && isReviser) return <Redirect from="/login" to="/reviser" />;
-    if (loggedIn && isEditor) return <Redirect from="/login" to="/editor" />;
+    if (loggedIn && isClient) return <Redirect from="/login" to="/client" />
+    if (loggedIn && isReviser) return <Redirect from="/login" to="/reviser" />
+    if (loggedIn && isEditor) return <Redirect from="/login" to="/editor" />
 
     return (
       <>
@@ -119,9 +119,7 @@ class Login extends Component {
                   <div>
                     <div className="mb-5 text-center">
                       <h1 className="h3 mb-1">Login</h1>
-                      <p className="text-muted mb-0">
-                        Entre com sua conta para continuar.
-                      </p>
+                      <p className="text-muted mb-0">Entre com sua conta para continuar.</p>
                     </div>
                     <span className="clearfix"></span>
                     <form schema={schema} onSubmit={this.handleLogin}>
@@ -133,9 +131,7 @@ class Login extends Component {
                             className="form-control form-control-prepend"
                             id="input-email"
                             placeholder="nome@exemplo.com"
-                            onChange={e =>
-                              this.setState({ usernameInput: e.target.value })
-                            }
+                            onChange={e => this.setState({ usernameInput: e.target.value })}
                           />
                           <div className="input-group-prepend">
                             <span className="input-group-text">
@@ -179,9 +175,7 @@ class Login extends Component {
                             className="form-control form-control-prepend"
                             id="input-password"
                             placeholder="Password"
-                            onChange={e =>
-                              this.setState({ passwordInput: e.target.value })
-                            }
+                            onChange={e => this.setState({ passwordInput: e.target.value })}
                           />
                           <div className="input-group-prepend">
                             <span className="input-group-text">
@@ -204,10 +198,7 @@ class Login extends Component {
                         </div>
                       </div>
                       <div className="mt-4">
-                        <button
-                          type="submit"
-                          className="btn btn-block btn-primary"
-                        >
+                        <button type="submit" className="btn btn-block btn-primary">
                           Entrar
                         </button>
                       </div>
@@ -219,15 +210,14 @@ class Login extends Component {
           </section>
         )}
       </>
-    );
+    )
   }
 }
 
 const mapStateToProps = state => ({
-  user: state.user
-});
+  user: state.user,
+})
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators({ ...UserActions }, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators({ ...UserActions }, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Login)

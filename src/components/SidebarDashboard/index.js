@@ -1,16 +1,6 @@
-import React, { useState } from "react"
+import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
-import {
-
-  Navbar,
-
-  NavbarToggler,
-  Collapse,
-  Nav,
-  NavItem,
-  NavLink
-} from "reactstrap"
-
+import { Navbar, NavbarToggler, Collapse, Nav, NavItem, NavLink } from 'reactstrap'
 
 const SidebarDashboard = () => {
   const [collapsed, setCollapsed] = useState(true)
@@ -25,18 +15,16 @@ const SidebarDashboard = () => {
     <>
       {loggedIn ? (
         <>
-          <section className='sidebar'>
-            <Navbar color='faded' expand='md'>
+          <section className="sidebar">
+            <Navbar color="faded" expand="md">
               <NavbarToggler onClick={toggleNavbar} className="mr-2" />
               <Collapse isOpen={!collapsed} navbar>
                 <Nav vertical navbar>
                   <NavItem>
-                    <NavLink href='/components/'>Components</NavLink>
+                    <NavLink href="/components/">Components</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink href='https://github.com/reactstrap/reactstrap'>
-                      Github
-              </NavLink>
+                    <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
                   </NavItem>
                 </Nav>
               </Collapse>
@@ -44,8 +32,8 @@ const SidebarDashboard = () => {
           </section>
         </>
       ) : (
-          <></>
-        )}
+        <></>
+      )}
     </>
   )
 }

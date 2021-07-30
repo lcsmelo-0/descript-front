@@ -1,48 +1,48 @@
-import React, { useEffect, useState, useCallback } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect, useState, useCallback } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
-import { Creators as ImageActions } from "../../store/ducks/image";
+import { Creators as ImageActions } from '../../store/ducks/image'
 
-import { useFormFields } from "../../utils/hooks";
+import { useFormFields } from '../../utils/hooks'
 
-import Spinner from "../../components/icons/Spinner";
+import Spinner from '../../components/icons/Spinner'
 
-import { Container, FormGroup, Label, Input, Form } from "reactstrap";
+import { Container, FormGroup, Label, Input, Form } from 'reactstrap'
 
 const ClientForm = props => {
   const [fields, handleFieldsChange] = useFormFields({
-    name: "",
-    file: "",
-    description: ""
-  });
-  const dispatch = useDispatch();
+    name: '',
+    file: '',
+    description: '',
+  })
+  const dispatch = useDispatch()
 
-  const [image, setImage] = useState({ preview: "" });
-  const { loading } = useSelector(state => state.image);
-  const stableDispatch = useCallback(dispatch, []);
+  const [image, setImage] = useState({ preview: '' })
+  const { loading } = useSelector(state => state.image)
+  const stableDispatch = useCallback(dispatch, [])
   useEffect(() => {
-    dispatch(ImageActions.getImagesRequest());
-  }, [stableDispatch]);
+    dispatch(ImageActions.getImagesRequest())
+  }, [stableDispatch])
 
   const handleImage = event => {
-    const reader = new FileReader();
+    const reader = new FileReader()
     if (event.target.files && event.target.files.length) {
-      const [file] = event.target.files;
-      reader.readAsDataURL(file);
+      const [file] = event.target.files
+      reader.readAsDataURL(file)
       reader.onload = () => {
-        fields.file = reader.result;
+        fields.file = reader.result
         setImage({
-          preview: reader.result
-        });
-      };
+          preview: reader.result,
+        })
+      }
     }
-  };
+  }
 
   const handleSubmit = event => {
-    event.preventDefault();
+    event.preventDefault()
 
-    dispatch(ImageActions.setImageRequest(fields));
-  };
+    dispatch(ImageActions.setImageRequest(fields))
+  }
 
   return (
     <>
@@ -57,10 +57,7 @@ const ClientForm = props => {
             <section className="slice py-5 py-lg-7">
               <div className="container">
                 <div className="row row-grid align-items-center">
-                  <Form
-                    class="md-form d-flex justify-content-center"
-                    onSubmit={handleSubmit}
-                  >
+                  <Form class="md-form d-flex justify-content-center" onSubmit={handleSubmit}>
                     <div class="file-field">
                       <div class="z-depth-1-half mb-4">
                         {image.preview ? (
@@ -80,20 +77,11 @@ const ClientForm = props => {
                         </div>
                       </div>
                       <FormGroup>
-                        <Label for="exampleFormControlTextarea1">
-                          Nome da imagem
-                        </Label>
-                        <Input
-                          type="text"
-                          name="name"
-                          onChange={handleFieldsChange}
-                          id="name"
-                        />
+                        <Label for="exampleFormControlTextarea1">Nome da imagem</Label>
+                        <Input type="text" name="name" onChange={handleFieldsChange} id="name" />
                       </FormGroup>
                       <FormGroup>
-                        <Label for="exampleFormControlTextarea1">
-                          Descrição da imagem
-                        </Label>
+                        <Label for="exampleFormControlTextarea1">Descrição da imagem</Label>
                         <textarea
                           class="form-control"
                           name="description"
@@ -104,10 +92,7 @@ const ClientForm = props => {
                       </FormGroup>
                     </div>
                     <div className="mt-4">
-                      <button
-                        type="submit"
-                        className="btn btn-block btn-primary"
-                      >
+                      <button type="submit" className="btn btn-block btn-primary">
                         Entrar
                       </button>
                     </div>
@@ -119,7 +104,7 @@ const ClientForm = props => {
         </>
       )}
     </>
-  );
-};
+  )
+}
 
-export default ClientForm;
+export default ClientForm

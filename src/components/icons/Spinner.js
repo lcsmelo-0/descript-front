@@ -1,25 +1,19 @@
-import React from "react"
+import React from 'react'
 const Spinner = () => (
-  <div className="container" style={{ height: "70vh" }}>
+  <div className="container" style={{ height: '70vh' }}>
     <div
       className="justify-content-center d-flex flex-row"
       style={{
-        position: "absolute",
-        height: "180px",
-        width: "180px",
-        top: "40%",
-        left: "50%",
-        marginLeft: "-50px",
-        marginTop: "-50px"
+        position: 'absolute',
+        height: '180px',
+        width: '180px',
+        top: '40%',
+        left: '50%',
+        marginLeft: '-50px',
+        marginTop: '-50px',
       }}
     >
-      <svg
-        width="38"
-        height="38"
-        viewBox="0 0 38 38"
-        xmlns="http://www.w3.org/2000/svg"
-        stroke="#0057A1"
-      >
+      <svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#0057A1">
         <g fill="none" fillRule="evenodd">
           <g transform="translate(1 1)" strokeWidth="2">
             <circle strokeOpacity=".5" cx="18" cy="18" r="18" />

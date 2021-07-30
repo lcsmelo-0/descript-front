@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-import logo from "../../assets/img/logo-branco.png";
+import logo from '../../assets/img/logo-branco.png'
 
 const Footer = () => {
   return (
@@ -13,19 +13,18 @@ const Footer = () => {
             preserveAspectRatio="none"
             x="0px"
             y="0px"
-            style={{ enableBackground: "new 0 0 2560 100" }}
+            style={{ enableBackground: 'new 0 0 2560 100' }}
           >
             <polygon points="2560 0 2560 100 0 100"></polygon>
           </svg>
         </div>
         <div className="container">
-            <h2>
-            O Descript é uma plataforma da Sondery
-            </h2>
-            <p>
-            Explicar aqui como a criação do Descript foi uma decisão da Sondery para melhorar a agilidade na prestação de serviços de descrição de imagem.
-            </p>
-          </div>
+          <h2>O Descript é uma plataforma da Sondery</h2>
+          <p>
+            Explicar aqui como a criação do Descript foi uma decisão da Sondery para melhorar a agilidade na prestação
+            de serviços de descrição de imagem.
+          </p>
+        </div>
         <div className="container pt-4">
           <hr className="divider divider-fade divider-dark my-5" />
           <div className="row">
@@ -34,7 +33,7 @@ const Footer = () => {
                 <img src={logo} alt="Logo" />
               </a>
               <p className="mt-4 text-sm opacity-8 pr-lg-4">
-              O Descript tenta oferecer a melhor plataforma de audio descrição para o seu negócio.
+                O Descript tenta oferecer a melhor plataforma de audio descrição para o seu negócio.
               </p>
               <ul className="nav mt-4">
                 <li className="nav-item">
@@ -112,7 +111,7 @@ const Footer = () => {
           <div className="row align-items-center justify-content-md-between pb-4">
             <div className="col-md-6">
               <div className="copyright text-sm font-weight-bold text-center text-md-left">
-                © 2021{" "}
+                © 2021{' '}
                 <a href="https://webpixels.io" className="font-weight-bold">
                   Descript
                 </a>
@@ -137,7 +136,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

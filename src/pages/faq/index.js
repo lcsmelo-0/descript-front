@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Container, Row, Col } from "reactstrap";
-import img1 from "../../assets/img/undraw_Location_search_re_ttoj.svg"
+import React, { useEffect, useState } from 'react'
+import { Container, Row, Col } from 'reactstrap'
+import img1 from '../../assets/img/undraw_Location_search_re_ttoj.svg'
 const Faq = () => {
   const [scrolled, setScrolled] = useState(false)
 
@@ -24,185 +24,204 @@ const Faq = () => {
 
   return (
     <>
-     <section className="slice slice-lg">
-      <Container>
-        <h1>Como Funciona</h1>
-        <Row className="row row-grid align-items-center">
-          <Col className="col-12 col-md-5 col-lg-6 order-md-2">
-            <h2>Receba descrições de imagens profissionais</h2>
-            <p>Descript é uma plataforma descrição de imagem que automatiza o fluxo de trabalho entre clientes, profissionais de descrição de imagem e consultores de revisão, agilizando o processo e garantindo uma entrega profissional e eficiente.</p>
-          </Col>
-          <Col className="col-12 col-md-5 col-lg-6 order-md-2">
-            <img src={img1} alt="Ilustração exemplo" style={{width: '100%'}} />
-          </Col>
-        </Row>
-        <Row className="row row-grid align-items-center">
-          <Col className="col-12">
-            <h1>Você só precisa mandar as suas imagens</h1>
-            <p>Assim que as imagens entram em nosso sistema, elas são direcionadas automaticamente para profissionais especialistas que farão as descrições.</p>
+      <section className="slice slice-lg">
+        <Container>
+          <h1>Como Funciona</h1>
+          <Row className="row row-grid align-items-center">
+            <Col className="col-12 col-md-5 col-lg-6 order-md-2">
+              <h2>Receba descrições de imagens profissionais</h2>
+              <p>
+                Descript é uma plataforma descrição de imagem que automatiza o fluxo de trabalho entre clientes,
+                profissionais de descrição de imagem e consultores de revisão, agilizando o processo e garantindo uma
+                entrega profissional e eficiente.
+              </p>
+            </Col>
+            <Col className="col-12 col-md-5 col-lg-6 order-md-2">
+              <img src={img1} alt="Ilustração exemplo" style={{ width: '100%' }} />
+            </Col>
+          </Row>
+          <Row className="row row-grid align-items-center">
+            <Col className="col-12">
+              <h1>Você só precisa mandar as suas imagens</h1>
+              <p>
+                Assim que as imagens entram em nosso sistema, elas são direcionadas automaticamente para profissionais
+                especialistas que farão as descrições.
+              </p>
+            </Col>
+          </Row>
+          <Row className="row row-grid align-items-center">
+            <Col className="col-12 col-md-5 col-lg-6 order-md-2">
+              <img src={img1} alt="Ilustração exemplo" style={{ width: '100%' }} />
+            </Col>
+            <Col className="col-12 col-md-5 col-lg-6 order-md-2">
+              <h2>Processo automatizado (porém humano)</h2>
+              <p>
+                Todas as descrições são feitas por profissionais em descrição de imagem e revisadas por consultores
+                cegos especialistas. Isso garante a qualidade e eficiência das nossas descrições.
+              </p>
+            </Col>
+          </Row>
 
-          </Col>
-        </Row>
-        <Row className="row row-grid align-items-center">
-          <Col className="col-12 col-md-5 col-lg-6 order-md-2">
-            <img src={img1} alt="Ilustração exemplo" style={{width: '100%'}} />            
-          </Col>
-          <Col className="col-12 col-md-5 col-lg-6 order-md-2">
-            <h2>Processo automatizado (porém humano)</h2>
-            <p>Todas as descrições são feitas por profissionais em descrição de imagem e revisadas por consultores cegos especialistas. Isso garante a qualidade e eficiência das nossas descrições.</p>
-          </Col>
-        </Row>
-  
-        <Row className="row row-grid align-items-center">
-          <Col className="col-12 col-md-5 col-lg-6 order-md-2">
-            <h2>Gerencie as suas descrições rapidamente</h2>
-            <p>No nosso painel principal você pode gerenciar todos os trabalhos realizados na plataforma.</p>
-          </Col>
-          <Col className="col-12 col-md-5 col-lg-6 order-md-2">
-            <img src={img1} alt="Ilustração exemplo" style={{width: '100%'}} />
-          </Col>
-        </Row>
-        <Row className="row row-grid align-items-center">
-          <Col className="col-12 col-md-5 col-lg-6 order-md-2">
-            <img src={img1} alt="Ilustração exemplo" style={{width: '100%'}} />            
-          </Col>
-          <Col className="col-12 col-md-5 col-lg-6 order-md-2">
-            <h3>Faça o upload de imagens em nosso banco de dados</h3>
-            <p>Todas as suas imagens ficarão armazenadas e você poderá consultar novamente quando quiser.</p>
-          </Col>
-        </Row>
-        <Row className="row row-grid align-items-center">
-          <Col className="col-12 col-md-5 col-lg-6 order-md-2">
-            <h3>Controle seu plano</h3>
-            <p>Você pode visualizar quantas imagens já enviou no mês, para controlar o seu plano e utilizar da melhor maneira possível.</p>
-          </Col>
-          <Col className="col-12 col-md-5 col-lg-6 order-md-2">
-            <img src={img1} alt="Ilustração exemplo" style={{width: '100%'}} />
-          </Col>
-        </Row>
-        <Row className="row row-grid align-items-center">
-          <Col className="col-12 col-md-5 col-lg-6 order-md-2">
-            <img src={img1} alt="Ilustração exemplo" style={{width: '100%'}} />            
-          </Col>
-          <Col className="col-12 col-md-5 col-lg-6 order-md-2">
-            <h3>Descrições extras</h3>
-            <p>Dentro da plataforma há diversas opções de serviços adicionais que podem ser rapidamente contratados.</p>
-          </Col>
-        </Row>  
-        <Row className="row row-grid align-items-center">
-          <Col className="col-12 col-md-5 col-lg-6 order-md-2">
-            <h2>Não deixamos você na mão</h2>
-            <p>Os nossos planos foram pensados para atender a empresas e agências de todos os tamanhos. E não se preocupe, pois dentro da nossa plataforma você sempre pode adquirir descrições extras para atender a projetos específicos ou fazer o upgrade para ter mais descrições mensais e aumentar ainda mais as suas possibilidades de acessibilidade.</p>
-          </Col>
-          <Col className="col-12 col-md-5 col-lg-6 order-md-2">
-            <img src={img1} alt="Ilustração exemplo" style={{width: '100%'}} />
-          </Col>
-        </Row>
-        <Row className="row row-grid row-icons align-items-center justify-content-center d-flex text-align-center">
-          <Col className="col-lg-3">
-            <span className="icon">
-             <i class="fas fa-book"></i>
-            </span>
-           <p> eBooks </p>
-          </Col>
-          <Col className="col-lg-3">
-            <span className="icon">
-             <i class="fas fa-book"></i>
-            </span>
-           <p> eBooks </p>
-          </Col>
-          <Col className="col-lg-3">
-            <span className="icon">
-             <i class="fas fa-book"></i>
-            </span>
-           <p> eBooks </p>
-          </Col>
-          <Col className="col-lg-3">
-            <span className="icon">
-             <i class="fas fa-book"></i>
-            </span>
-           <p> eBooks </p>
-          </Col>
-          <Col className="col-lg-3">
-            <span className="icon">
-             <i class="fas fa-book"></i>
-            </span>
-           <p> eBooks </p>
-          </Col>
-          <Col className="col-lg-3">
-            <span className="icon">
-             <i class="fas fa-book"></i>
-            </span>
-           <p> eBooks </p>
-          </Col>
-          <Col className="col-lg-3">
-            <span className="icon">
-             <i class="fas fa-book"></i>
-            </span>
-           <p> eBooks </p>
-          </Col>
-          <Col className="col-lg-3">
-            <span className="icon">
-             <i class="fas fa-book"></i>
-            </span>
-           <p> eBooks </p>
-          </Col>
-          <Col className="col-lg-3">
-            <span className="icon">
-             <i class="fas fa-book"></i>
-            </span>
-           <p> eBooks </p>
-          </Col>
-          <Col className="col-lg-3">
-            <span className="icon">
-             <i class="fas fa-book"></i>
-            </span>
-           <p> eBooks </p>
-          </Col>
-          <Col className="col-lg-3">
-            <span className="icon">
-             <i class="fas fa-book"></i>
-            </span>
-           <p> eBooks </p>
-          </Col>
-          <Col className="col-lg-3">
-            <span className="icon">
-             <i class="fas fa-book"></i>
-            </span>
-           <p> eBooks </p>
-          </Col>
-          <Col className="col-lg-3">
-            <span className="icon">
-             <i class="fas fa-book"></i>
-            </span>
-           <p> eBooks </p>
-          </Col>
-          <Col className="col-lg-3">
-            <span className="icon">
-             <i class="fas fa-book"></i>
-            </span>
-           <p> eBooks </p>
-          </Col>
-          <Col className="col-lg-3">
-            <span className="icon">
-             <i class="fas fa-book"></i>
-            </span>
-           <p> eBooks </p>
-          </Col>
-          <Col className="col-lg-3">
-            <span className="icon">
-             <i class="fas fa-book"></i>
-            </span>
-           <p> eBooks </p>
-          </Col>
-        </Row>       
-      </Container>
-     </section>
+          <Row className="row row-grid align-items-center">
+            <Col className="col-12 col-md-5 col-lg-6 order-md-2">
+              <h2>Gerencie as suas descrições rapidamente</h2>
+              <p>No nosso painel principal você pode gerenciar todos os trabalhos realizados na plataforma.</p>
+            </Col>
+            <Col className="col-12 col-md-5 col-lg-6 order-md-2">
+              <img src={img1} alt="Ilustração exemplo" style={{ width: '100%' }} />
+            </Col>
+          </Row>
+          <Row className="row row-grid align-items-center">
+            <Col className="col-12 col-md-5 col-lg-6 order-md-2">
+              <img src={img1} alt="Ilustração exemplo" style={{ width: '100%' }} />
+            </Col>
+            <Col className="col-12 col-md-5 col-lg-6 order-md-2">
+              <h3>Faça o upload de imagens em nosso banco de dados</h3>
+              <p>Todas as suas imagens ficarão armazenadas e você poderá consultar novamente quando quiser.</p>
+            </Col>
+          </Row>
+          <Row className="row row-grid align-items-center">
+            <Col className="col-12 col-md-5 col-lg-6 order-md-2">
+              <h3>Controle seu plano</h3>
+              <p>
+                Você pode visualizar quantas imagens já enviou no mês, para controlar o seu plano e utilizar da melhor
+                maneira possível.
+              </p>
+            </Col>
+            <Col className="col-12 col-md-5 col-lg-6 order-md-2">
+              <img src={img1} alt="Ilustração exemplo" style={{ width: '100%' }} />
+            </Col>
+          </Row>
+          <Row className="row row-grid align-items-center">
+            <Col className="col-12 col-md-5 col-lg-6 order-md-2">
+              <img src={img1} alt="Ilustração exemplo" style={{ width: '100%' }} />
+            </Col>
+            <Col className="col-12 col-md-5 col-lg-6 order-md-2">
+              <h3>Descrições extras</h3>
+              <p>
+                Dentro da plataforma há diversas opções de serviços adicionais que podem ser rapidamente contratados.
+              </p>
+            </Col>
+          </Row>
+          <Row className="row row-grid align-items-center">
+            <Col className="col-12 col-md-5 col-lg-6 order-md-2">
+              <h2>Não deixamos você na mão</h2>
+              <p>
+                Os nossos planos foram pensados para atender a empresas e agências de todos os tamanhos. E não se
+                preocupe, pois dentro da nossa plataforma você sempre pode adquirir descrições extras para atender a
+                projetos específicos ou fazer o upgrade para ter mais descrições mensais e aumentar ainda mais as suas
+                possibilidades de acessibilidade.
+              </p>
+            </Col>
+            <Col className="col-12 col-md-5 col-lg-6 order-md-2">
+              <img src={img1} alt="Ilustração exemplo" style={{ width: '100%' }} />
+            </Col>
+          </Row>
+          <Row className="row row-grid row-icons align-items-center justify-content-center d-flex text-align-center">
+            <Col className="col-lg-3">
+              <span className="icon">
+                <i class="fas fa-book"></i>
+              </span>
+              <p> eBooks </p>
+            </Col>
+            <Col className="col-lg-3">
+              <span className="icon">
+                <i class="fas fa-book"></i>
+              </span>
+              <p> eBooks </p>
+            </Col>
+            <Col className="col-lg-3">
+              <span className="icon">
+                <i class="fas fa-book"></i>
+              </span>
+              <p> eBooks </p>
+            </Col>
+            <Col className="col-lg-3">
+              <span className="icon">
+                <i class="fas fa-book"></i>
+              </span>
+              <p> eBooks </p>
+            </Col>
+            <Col className="col-lg-3">
+              <span className="icon">
+                <i class="fas fa-book"></i>
+              </span>
+              <p> eBooks </p>
+            </Col>
+            <Col className="col-lg-3">
+              <span className="icon">
+                <i class="fas fa-book"></i>
+              </span>
+              <p> eBooks </p>
+            </Col>
+            <Col className="col-lg-3">
+              <span className="icon">
+                <i class="fas fa-book"></i>
+              </span>
+              <p> eBooks </p>
+            </Col>
+            <Col className="col-lg-3">
+              <span className="icon">
+                <i class="fas fa-book"></i>
+              </span>
+              <p> eBooks </p>
+            </Col>
+            <Col className="col-lg-3">
+              <span className="icon">
+                <i class="fas fa-book"></i>
+              </span>
+              <p> eBooks </p>
+            </Col>
+            <Col className="col-lg-3">
+              <span className="icon">
+                <i class="fas fa-book"></i>
+              </span>
+              <p> eBooks </p>
+            </Col>
+            <Col className="col-lg-3">
+              <span className="icon">
+                <i class="fas fa-book"></i>
+              </span>
+              <p> eBooks </p>
+            </Col>
+            <Col className="col-lg-3">
+              <span className="icon">
+                <i class="fas fa-book"></i>
+              </span>
+              <p> eBooks </p>
+            </Col>
+            <Col className="col-lg-3">
+              <span className="icon">
+                <i class="fas fa-book"></i>
+              </span>
+              <p> eBooks </p>
+            </Col>
+            <Col className="col-lg-3">
+              <span className="icon">
+                <i class="fas fa-book"></i>
+              </span>
+              <p> eBooks </p>
+            </Col>
+            <Col className="col-lg-3">
+              <span className="icon">
+                <i class="fas fa-book"></i>
+              </span>
+              <p> eBooks </p>
+            </Col>
+            <Col className="col-lg-3">
+              <span className="icon">
+                <i class="fas fa-book"></i>
+              </span>
+              <p> eBooks </p>
+            </Col>
+          </Row>
+        </Container>
+      </section>
       <section className="slice slice-lg" id="sct-faq">
         <Container>
           <div className="row row-grid">
             <div className="col-lg-3">
-              <div data-toggle="sticky" data-sticky-offset="50" className={navbarClasses.join(" ")}>
+              <div data-toggle="sticky" data-sticky-offset="50" className={navbarClasses.join(' ')}>
                 <div className="card">
                   <div className="list-group list-group-flush">
                     <a
@@ -224,14 +243,7 @@ const Faq = () => {
                           strokeLinejoin="round"
                           className="feather feather-layout mr-2"
                         >
-                          <rect
-                            x="3"
-                            y="3"
-                            width="18"
-                            height="18"
-                            rx="2"
-                            ry="2"
-                          ></rect>
+                          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                           <line x1="3" y1="9" x2="21" y2="9"></line>
                           <line x1="9" y1="21" x2="9" y2="9"></line>
                         </svg>
@@ -390,11 +402,9 @@ const Faq = () => {
                     >
                       <div className="card-body">
                         <p>
-                          Anim pariatur cliche reprehenderit, enim eiusmod high
-                          life accusamus terry richardson ad squid. 3 wolf moon
-                          officia aute, non cupidatat skateboard dolor brunch.
-                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-                          wolf moon tempor, sunt aliqua put a bird on it squid
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                          squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                          nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
                           single-origin coffee nulla assumenda shoreditch et.
                         </p>
                       </div>
@@ -423,14 +433,7 @@ const Faq = () => {
                           strokeLinejoin="round"
                           className="feather feather-unlock mr-3"
                         >
-                          <rect
-                            x="3"
-                            y="11"
-                            width="18"
-                            height="11"
-                            rx="2"
-                            ry="2"
-                          ></rect>
+                          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                           <path d="M7 11V7a5 5 0 0 1 9.9-1"></path>
                         </svg>
                         How do I get access to a theme?
@@ -444,11 +447,9 @@ const Faq = () => {
                     >
                       <div className="card-body">
                         <p>
-                          Anim pariatur cliche reprehenderit, enim eiusmod high
-                          life accusamus terry richardson ad squid. 3 wolf moon
-                          officia aute, non cupidatat skateboard dolor brunch.
-                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-                          wolf moon tempor, sunt aliqua put a bird on it squid
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                          squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                          nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
                           single-origin coffee nulla assumenda shoreditch et.
                         </p>
                       </div>
@@ -490,11 +491,9 @@ const Faq = () => {
                     >
                       <div className="card-body">
                         <p>
-                          Anim pariatur cliche reprehenderit, enim eiusmod high
-                          life accusamus terry richardson ad squid. 3 wolf moon
-                          officia aute, non cupidatat skateboard dolor brunch.
-                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-                          wolf moon tempor, sunt aliqua put a bird on it squid
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                          squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                          nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
                           single-origin coffee nulla assumenda shoreditch et.
                         </p>
                       </div>
@@ -568,11 +567,9 @@ const Faq = () => {
                     >
                       <div className="card-body">
                         <p>
-                          Anim pariatur cliche reprehenderit, enim eiusmod high
-                          life accusamus terry richardson ad squid. 3 wolf moon
-                          officia aute, non cupidatat skateboard dolor brunch.
-                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-                          wolf moon tempor, sunt aliqua put a bird on it squid
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                          squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                          nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
                           single-origin coffee nulla assumenda shoreditch et.
                         </p>
                       </div>
@@ -601,14 +598,7 @@ const Faq = () => {
                           strokeLinejoin="round"
                           className="feather feather-unlock mr-3"
                         >
-                          <rect
-                            x="3"
-                            y="11"
-                            width="18"
-                            height="11"
-                            rx="2"
-                            ry="2"
-                          ></rect>
+                          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                           <path d="M7 11V7a5 5 0 0 1 9.9-1"></path>
                         </svg>
                         How do I get access to a theme?
@@ -622,11 +612,9 @@ const Faq = () => {
                     >
                       <div className="card-body">
                         <p>
-                          Anim pariatur cliche reprehenderit, enim eiusmod high
-                          life accusamus terry richardson ad squid. 3 wolf moon
-                          officia aute, non cupidatat skateboard dolor brunch.
-                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-                          wolf moon tempor, sunt aliqua put a bird on it squid
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                          squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                          nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
                           single-origin coffee nulla assumenda shoreditch et.
                         </p>
                       </div>
@@ -668,11 +656,9 @@ const Faq = () => {
                     >
                       <div className="card-body">
                         <p>
-                          Anim pariatur cliche reprehenderit, enim eiusmod high
-                          life accusamus terry richardson ad squid. 3 wolf moon
-                          officia aute, non cupidatat skateboard dolor brunch.
-                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-                          wolf moon tempor, sunt aliqua put a bird on it squid
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                          squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                          nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
                           single-origin coffee nulla assumenda shoreditch et.
                         </p>
                       </div>
@@ -746,11 +732,9 @@ const Faq = () => {
                     >
                       <div className="card-body">
                         <p>
-                          Anim pariatur cliche reprehenderit, enim eiusmod high
-                          life accusamus terry richardson ad squid. 3 wolf moon
-                          officia aute, non cupidatat skateboard dolor brunch.
-                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-                          wolf moon tempor, sunt aliqua put a bird on it squid
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                          squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                          nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
                           single-origin coffee nulla assumenda shoreditch et.
                         </p>
                       </div>
@@ -779,14 +763,7 @@ const Faq = () => {
                           strokeLinejoin="round"
                           className="feather feather-unlock mr-3"
                         >
-                          <rect
-                            x="3"
-                            y="11"
-                            width="18"
-                            height="11"
-                            rx="2"
-                            ry="2"
-                          ></rect>
+                          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                           <path d="M7 11V7a5 5 0 0 1 9.9-1"></path>
                         </svg>
                         How do I get access to a theme?
@@ -800,11 +777,9 @@ const Faq = () => {
                     >
                       <div className="card-body">
                         <p>
-                          Anim pariatur cliche reprehenderit, enim eiusmod high
-                          life accusamus terry richardson ad squid. 3 wolf moon
-                          officia aute, non cupidatat skateboard dolor brunch.
-                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-                          wolf moon tempor, sunt aliqua put a bird on it squid
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                          squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                          nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
                           single-origin coffee nulla assumenda shoreditch et.
                         </p>
                       </div>
@@ -846,11 +821,9 @@ const Faq = () => {
                     >
                       <div className="card-body">
                         <p>
-                          Anim pariatur cliche reprehenderit, enim eiusmod high
-                          life accusamus terry richardson ad squid. 3 wolf moon
-                          officia aute, non cupidatat skateboard dolor brunch.
-                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-                          wolf moon tempor, sunt aliqua put a bird on it squid
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                          squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                          nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
                           single-origin coffee nulla assumenda shoreditch et.
                         </p>
                       </div>
@@ -887,7 +860,7 @@ const Faq = () => {
         </Container>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Faq;
+export default Faq

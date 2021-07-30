@@ -20,8 +20,8 @@ const store = createStore(
   persistReducers(reducers),
   compose(
     applyMiddleware(...middlewares),
-    process.env.NODE_ENV === 'development' ? console.tron.createEnhancer() : dummy
-  )
+    process.env.NODE_ENV === 'development' ? console.tron.createEnhancer() : dummy,
+  ),
 )
 const persistor = persistStore(store)
 

@@ -12,7 +12,7 @@ const parse = text => {
 
   return {
     title,
-    content
+    content,
   }
 }
 
@@ -27,8 +27,8 @@ const error = (...text) => {
       {content}
     </>,
     {
-      toastId
-    }
+      toastId,
+    },
   )
 }
 
@@ -43,8 +43,8 @@ const success = (...text) => {
       {content}
     </>,
     {
-      toastId
-    }
+      toastId,
+    },
   )
 }
 
@@ -59,8 +59,8 @@ const warn = (...text) => {
       {content}
     </>,
     {
-      toastId
-    }
+      toastId,
+    },
   )
 }
 
@@ -73,8 +73,8 @@ const notification = (text, options) => {
     </>,
     {
       toastId,
-      ...options
-    }
+      ...options,
+    },
   )
 }
 
@@ -82,5 +82,5 @@ export default {
   error,
   success,
   warn,
-  notification
+  notification,
 }

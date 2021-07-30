@@ -1,15 +1,15 @@
-section.slice.py-5.py-lg-7.no-padding-top{
-    padding-top: 0 !important;
+section.slice.py-5.py-lg-7.no-padding-top {
+  padding-top: 0 !important;
 }
 
-.beneficios{
-    justify-content: space-between;
+.beneficios {
+  justify-content: space-between;
 }
 
-.beneficios__texto{
-    text-align: start;
+.beneficios__texto {
+  text-align: start;
 }
 
-.beneficios__titulo{
-    margin-top: -10px;
+.beneficios__titulo {
+  margin-top: -10px;
 }
