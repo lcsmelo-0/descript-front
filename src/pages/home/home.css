@@ -13,3 +13,7 @@ section.slice.py-5.py-lg-7.no-padding-top {
 .beneficios__titulo {
   margin-top: -10px;
 }
+
+.noMarginTop {
+  margin-top: 0 !important;
+}

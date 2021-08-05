@@ -65,7 +65,7 @@ const Home = () => {
           </Row>
           <Row md="5">
             <Col md="4">
-              <div className="card border-0 bg-soft-danger">
+              <div className="card border-0 bg-soft-danger noMarginTop">
                 <div className="card-body pb-5">
                   <div className="pt-4 pb-5">
                     <img
@@ -84,7 +84,7 @@ const Home = () => {
               </div>
             </Col>
             <Col md="4">
-              <div className="card border-0 bg-soft-success mt-lg-5">
+              <div className="card border-0 bg-soft-success noMarginTop">
                 <div className="card-body pb-5">
                   <div className="pt-4 pb-5">
                     <img
@@ -103,7 +103,7 @@ const Home = () => {
               </div>
             </Col>
             <Col md="4">
-              <div className="card border-0 bg-soft-warning mt-lg-7">
+              <div className="card border-0 bg-soft-warning mt-lg-7 noMarginTop">
                 <div className="card-body pb-5">
                   <div className="pt-4 pb-5">
                     <img

@@ -109,6 +109,18 @@ const Header = () => {
                     Termos
                   </Link>
                 </li>
+                <li className="nav-item nav-item-spaced dropdown dropdown-animate" dataToggle="hover">
+                  <Link
+                    className="nav-link"
+                    to="/faq"
+                    role="button"
+                    dataToggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Perguntas frequentes
+                  </Link>
+                </li>
               </ul>
               <ul className="navbar-nav align-items-lg-center d-none d-lg-flex ml-lg-auto">
                 <li className="nav-item">

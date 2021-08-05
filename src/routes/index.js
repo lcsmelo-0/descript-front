@@ -16,6 +16,7 @@ import RegisterForm from '../pages/registerForm'
 import PaymentForm from '../pages/payment'
 import WhoWeAre from '../pages/WhoWeAre'
 import Terms from '../pages/terms'
+import Faq from '../pages/Faq'
 
 const Routes = () => (
   <Switch>
@@ -27,6 +28,7 @@ const Routes = () => (
     <Route exact path="/quem-somos" component={WhoWeAre} />
     <Route exact path="/checkout" component={PaymentForm} />
     <Route exact path="/termos" component={Terms} />
+    <Route exact path="/faq" component={Faq} />
     <PrivateRoute exact path="/editor" component={Editor} />
     <PrivateRoute exact path="/client" component={Client} />
     <PrivateRoute exact path="/reviser" component={Reviser} />

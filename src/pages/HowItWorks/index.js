@@ -48,7 +48,7 @@ const HowItWorks = () => {
             </p>
           </div>
           <div>
-            <img src={img1} alt="" />
+            <img src={img1} alt="place holder" />
           </div>
         </div>
 
@@ -58,7 +58,7 @@ const HowItWorks = () => {
             Assim que as imagens entram em nosso sistema, elas são direcionadas automaticamente para profissionais
             especialistas que farão as descrições.
           </p>
-          <img src={img1} />
+          <img src={img1} alt="" />
         </div>
 
         <div className={'howItWorks__line'}>

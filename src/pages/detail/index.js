@@ -11,7 +11,6 @@ import { useFormFields } from '../../utils/hooks'
 import { Button, FormGroup, Form, Input, Row, Col, Container, Label } from 'reactstrap'
 
 import Spinner from '../../components/icons/Spinner'
-import Header from '../../components/Header'
 
 const Detail = props => {
   const [fields, handleFieldsChange] = useFormFields({
