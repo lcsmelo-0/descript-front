@@ -58,14 +58,6 @@
   max-height: 300px;
 }
 
-.howItWorks__centerLine button {
-  border: none;
-  border-radius: 20px;
-  background-color: #4353ff;
-  color: white;
-  padding: 5px 15px;
-}
-
 .howItWorks__twoColumns {
   display: flex;
   align-items: flex-start;

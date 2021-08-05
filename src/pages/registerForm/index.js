@@ -1,74 +1,97 @@
 import React from 'react'
-import { Wizard, Steps, Step, Navigation } from 'react-hooks-multi-step-wizard'
-import { Input, Label } from 'reactstrap'
+import { CheckoutButton, InputComponent } from '../../components'
+import { Form, FormGroup, Input, Label } from 'reactstrap'
+
+import './registerForm.css'
 
 import UseForms from '../../utils/useForms'
 
 const RegisterForm = () => {
   const { inputs, change } = UseForms()
+
   return (
-    <div className="container">
-      <Wizard>
-        <Steps>
-          <Step>
-            <div>
-              <Label for="name">Nome completo</Label>
-              <Input type="text" value={inputs.name} name="name" onChange={change} />
-            </div>
-            <div>
-              <Label for="email">Email</Label>
-              <Input type="text" value={inputs.email} name="email" onChange={change} />
-            </div>
-            <div>
-              <Label>Telefone</Label>
-              <Input type="text" />
-            </div>
-            <div>
-              <Label>Profissão</Label>
-              <Input type="text" />
-            </div>
-            <div>
-              <Label>Departamento</Label>
-              <Input type="text" />
-            </div>
-            <div>
-              <Label>Possui alguma deficiência?</Label>
-              <Input type="text" />
-            </div>
-            <div>
-              <Label>Se sim, quais?</Label>
-              <Input type="text" />
-            </div>
-          </Step>
-          <Step>
-            <div>
-              <Label>Nome da empresa</Label>
-              <Input type="text" />
-            </div>
-            <div>
-              <Label>CPNJ</Label>
-              <Input type="text" />
-            </div>
-            <div>
-              <Label>Endereço</Label>
-              <Input type="text" />
-            </div>
-            <div>
-              <Label>Site</Label>
-              <Input type="text" />
-            </div>
-            <div>
-              <Label>Número de Colaboradores</Label>
-              <Input type="text" />
-            </div>
-            <div>
-              <Label>Número de Clientes</Label>
-              <Input type="text" />
-            </div>
-          </Step>
-        </Steps>
-        <Navigation />
-      </Wizard>
+    <div className="container registerForm">
+      <div>
+        <h1>Cadastro</h1>
+      </div>
+      <Form>
+        <InputComponent
+          className="registerForm__inputContainer"
+          name="name"
+          type="text"
+          value={inputs.name}
+          onChange={change}
+        >
+          Nome completo
+        </InputComponent>
+        <InputComponent
+          className="registerForm__inputContainer"
+          name="email"
+          type="email"
+          value={inputs.email}
+          onChange={change}
+        >
+          Email
+        </InputComponent>
+        <InputComponent className="registerForm__inputContainer" name="phone" type="text">
+          Telefone
+        </InputComponent>
+        <FormGroup className="registerForm__inputContainer">
+          <Label>Profissão</Label>
+          <Input type="text" />
+        </FormGroup>
+        <FormGroup className="registerForm__inputContainer">
+          <Label>Departamento</Label>
+          <Input type="text" />
+        </FormGroup>
+        <FormGroup tag="fieldset" className="registerForm__inputContainer">
+          <Label>Possui alguma deficiência?</Label>
+          <FormGroup check>
+            <Label check>
+              <Input type="radio" name="radio1" />
+              Sim
+            </Label>
+          </FormGroup>
+          <FormGroup check>
+            <Label check>
+              <Input type="radio" name="radio1" />
+              Não
+            </Label>
+          </FormGroup>
+        </FormGroup>
+        <FormGroup className="registerForm__inputContainer">
+          <Label>Se sim, quais?</Label>
+          <Input type="text" />
+        </FormGroup>
+        <FormGroup className="registerForm__inputContainer">
+          <Label>Nome da empresa</Label>
+          <Input type="text" />
+        </FormGroup>
+        <FormGroup className="registerForm__inputContainer">
+          <Label>CNPJ</Label>
+          <Input type="text" />
+        </FormGroup>
+        <FormGroup className="registerForm__inputContainer">
+          <Label>Endereço</Label>
+          <Input type="text" />
+        </FormGroup>
+        <FormGroup className="registerForm__inputContainer">
+          <Label>Site</Label>
+          <Input type="text" />
+        </FormGroup>
+        <FormGroup className="registerForm__inputContainer">
+          <Label>Número de Colaboradores</Label>
+          <Input type="number" />
+        </FormGroup>
+        <FormGroup className="registerForm__inputContainer">
+          <Label>Número de Clientes</Label>
+          <Input type="number" />
+        </FormGroup>
+
+        <CheckoutButton to="/checkout" className="button">
+          Continuar
+        </CheckoutButton>
+      </Form>
     </div>
   )
 }

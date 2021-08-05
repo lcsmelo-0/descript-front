@@ -1,4 +1,6 @@
 import React from 'react'
+import { RightArrow } from '../../components'
+import { Link } from 'react-router-dom'
 
 const Princing = () => {
   return (
@@ -31,12 +33,9 @@ const Princing = () => {
                   <li>Apresentação de Onboarding</li>
                   <li>Suporte Técnico</li>
                 </ul>
-                <a
-                  href="https://themes.getbootstrap.com/product/quick-website-ui-kit-2/"
-                  class="btn btn-sm btn-warning hover-translate-y-n3 hover-shadow-lg mb-3"
-                >
+                <Link to="/cadastrar" class="btn btn-sm btn-warning hover-translate-y-n3 hover-shadow-lg mb-3">
                   Compre Agora
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -57,12 +56,9 @@ const Princing = () => {
                   <li>Suporte Técnico</li>
                   <li>Palestra sobre Cultura da Acessibilidade</li>
                 </ul>
-                <a
-                  href="https://themes.getbootstrap.com/product/quick-website-ui-kit-2/"
-                  class="btn btn-sm btn-white hover-translate-y-n3 hover-shadow-lg mb-3"
-                >
+                <Link to="/cadastrar" class="btn btn-sm btn-white hover-translate-y-n3 hover-shadow-lg mb-3">
                   Compre agora
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -85,12 +81,9 @@ const Princing = () => {
                   <li>Atendimento exclusivo</li>
                   <li>API de integração</li>
                 </ul>
-                <a
-                  href="https://themes.getbootstrap.com/product/quick-website-ui-kit-2/"
-                  class="btn btn-sm btn-white hover-translate-y-n3 hover-shadow-lg mb-3"
-                >
+                <Link to="/cadastrar" class="btn btn-sm btn-white hover-translate-y-n3 hover-shadow-lg mb-3">
                   Compre agora
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -100,21 +93,7 @@ const Princing = () => {
           <p class="mb-2">Precisa de ajuda para escolher o seu plano?</p>
           <a href="/" class="text-primary text-underline--dashed">
             Entre em contato
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              class="feather feather-arrow-right ml-2"
-            >
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
+            <RightArrow />
           </a>
         </div>
       </div>

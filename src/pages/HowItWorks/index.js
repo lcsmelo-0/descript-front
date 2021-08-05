@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container } from 'reactstrap'
+import { CheckoutButton } from '../../components'
 import img1 from '../../assets/img/undraw_Location_search_re_ttoj.svg'
 
 import './howItWorks.css'
@@ -117,24 +118,7 @@ const HowItWorks = () => {
 
         <div className="howItWorks__centerLine">
           <h2>Assine o Descript e comece a fazer conteúdos mais acessíveis</h2>
-          <button>
-            Começe já{' '}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              class="feather feather-arrow-right ml-2"
-            >
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </button>
+          <CheckoutButton>Comece já</CheckoutButton>
         </div>
       </Container>
     </section>

@@ -1,0 +1,12 @@
+.checkoutButton {
+  border: none;
+  border-radius: 20px;
+  background-color: #4353ff;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+}
+
+.checkoutButton:hover {
+  color: white;
+}
