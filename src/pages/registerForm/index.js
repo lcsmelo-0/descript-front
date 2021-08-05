@@ -1,8 +1,7 @@
 import React from 'react'
-import { CheckoutButton, InputComponent } from '../../components'
+import { FormButton, InputComponent } from '../../components'
 import { Form, FormGroup, Input, Label } from 'reactstrap'
 
-import './registerForm.css'
 
 import UseForms from '../../utils/useForms'
 
@@ -88,9 +87,9 @@ const RegisterForm = () => {
           <Input type="number" />
         </FormGroup>
 
-        <CheckoutButton to="/checkout" className="button">
+        <FormButton to="/checkout" className="button">
           Continuar
-        </CheckoutButton>
+        </FormButton>
       </Form>
     </div>
   )

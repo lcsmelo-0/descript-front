@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import RightArrow from '../RightArrow'
 import './button.css'
 
-export const CheckoutButton = ({ className, children, href, to }) => {
+export const Button = ({ className, children, href, to }) => {
   const handleButton = () => {}
 
   return (

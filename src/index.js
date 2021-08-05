@@ -9,11 +9,13 @@ import { HashRouter as Router } from 'react-router-dom'
 import './config/reactotron'
 import storeConfig from './store'
 import App from './App'
+import ScrollToTop from './components/ScrollToTop'
 
 ReactDOM.render(
   <Provider store={storeConfig.store}>
     <PersistGate persistor={storeConfig.persistor}>
       <Router basename={process.env.PUBLIC_URL}>
+        <ScrollToTop />
         <App />
       </Router>
     </PersistGate>

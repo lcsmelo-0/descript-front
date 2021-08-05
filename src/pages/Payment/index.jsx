@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Card from 'react-credit-cards'
 import { Form, FormGroup, Input, Label } from 'reactstrap'
 
+import { FormButton } from '../../components'
 import { formatCreditCardNumber, formatCVC, formatExpirationDate } from '../../utils/creditCard'
 
 import 'react-credit-cards/es/styles-compiled.css'
@@ -37,7 +38,6 @@ const Payment = () => {
       setCvc(target.value)
     }
   }
-
 
   return (
     <div className="container">
@@ -93,7 +93,7 @@ const Payment = () => {
             onFocus={handleInputFocus}
           />
         </FormGroup>
-        <button className="btn btn-primary btn-block">Finalizar Pagamento</button>
+        <FormButton>Finalizar Pagamento</FormButton>
       </Form>
     </div>
   )

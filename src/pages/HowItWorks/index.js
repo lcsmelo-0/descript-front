@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container } from 'reactstrap'
-import { CheckoutButton } from '../../components'
+import { Button } from '../../components'
 import img1 from '../../assets/img/undraw_Location_search_re_ttoj.svg'
 
 import './howItWorks.css'
@@ -118,7 +118,7 @@ const HowItWorks = () => {
 
         <div className="howItWorks__centerLine">
           <h2>Assine o Descript e comece a fazer conteúdos mais acessíveis</h2>
-          <CheckoutButton>Comece já</CheckoutButton>
+          <Button>Comece já</Button>
         </div>
       </Container>
     </section>
