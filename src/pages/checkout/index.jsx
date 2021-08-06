@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Card from 'react-credit-cards'
 import { Form, FormGroup, Input, Label } from 'reactstrap'
 

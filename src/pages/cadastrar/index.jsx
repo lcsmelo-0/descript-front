@@ -1,4 +1,3 @@
-import React from 'react'
 import { FormButton, InputComponent } from '../../components'
 import { Form, FormGroup, Input, Label } from 'reactstrap'
 

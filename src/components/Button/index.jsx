@@ -1,10 +1,9 @@
-import React from 'react'
 import { useRouter } from 'next/router'
 import RightArrow from '../RightArrow'
 import './button.module.css'
 
 export const Button = ({ className, children, href, to }) => {
-  const handleButton = () => {}
+  const handleButton = () => { }
   const router = useRouter()
 
   return (

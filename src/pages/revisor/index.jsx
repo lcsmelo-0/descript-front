@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react'
+import { useEffect, useCallback } from 'react'
 import { connect, useDispatch, useSelector } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Creators as ImageActions } from '../../store/ducks/image'

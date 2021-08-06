@@ -1,4 +1,3 @@
-import React from 'react'
 const Spinner = () => (
   <div className="container" style={{ height: '70vh' }}>
     <div

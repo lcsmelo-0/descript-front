@@ -1,4 +1,3 @@
-import React from 'react'
 import NotificationAlert from 'react-notification-alert'
 
 const Notification = ({ onClick = _ => _, place, ...props }) => {

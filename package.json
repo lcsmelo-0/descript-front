@@ -1,5 +1,5 @@
 {
-  "name": "maistentativas",
+  "name": "sonderydescript",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://sonderybr.github.io/blindless",
@@ -7,21 +7,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
     "bootstrap": "5.0.2",
-    "file-saver": "^2.0.2",
-    "lodash": "^4.17.15",
     "next": "^11.0.1",
     "next-images": "^1.8.1",
-    "node-sass": "^5.0.0",
     "payment": "^2.4.0",
     "react": "^16.13.1",
     "react-bootstrap": "^2.0.0-beta.4",
@@ -36,29 +28,9 @@
     "redux-form": "^8.3.0",
     "redux-persist": "^6.0.0",
     "redux-saga": "^1.0.2",
-    "slate": "^0.58.1",
-    "slate-react": "^0.58.2",
     "yup": "^0.28.1"
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3",
-    "husky": "^4.2.3",
-    "lint-staged": "^10.0.7",
-    "prettier": "^2.3.2",
-    "reactotron-react-js": "^3.0.2",
-    "reactotron-redux": "^3.1.0",
-    "reactotron-redux-saga": "^4.2.1"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "prettier": "^2.3.2"
   }
 }

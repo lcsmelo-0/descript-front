@@ -1,4 +1,3 @@
-import React from 'react'
 import { FormGroup, Label, Input } from 'reactstrap'
 
 export const InputComponent = ({ className, children, name, type, value, onChange }) => {

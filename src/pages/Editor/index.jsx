@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Creators as ImageActions } from '../../store/ducks/image'
 import { Card, CardBody, CardTitle, CardText, CardImg, CardHeader, Row, Col, Badge, CardFooter } from 'reactstrap'

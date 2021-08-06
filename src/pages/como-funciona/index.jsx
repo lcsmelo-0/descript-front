@@ -1,4 +1,3 @@
-import React from 'react'
 import { Container } from 'reactstrap'
 import { Button } from '../../components'
 import img1 from '../../assets/img/undraw_Location_search_re_ttoj.svg'
