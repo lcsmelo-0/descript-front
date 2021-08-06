@@ -1,10 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useRouter } from 'next/router'
 import RightArrow from '../RightArrow'
-import './button.css'
+import './button.module.css'
 
 export const Button = ({ className, children, href, to }) => {
   const handleButton = () => {}
+  const router = useRouter()
 
   return (
     <>
@@ -13,9 +14,9 @@ export const Button = ({ className, children, href, to }) => {
           {children} <RightArrow />
         </button>
       ) : (
-        <Link to={to} className={`checkoutButton ${className}`}>
+        <a onClick={() => router.push(to)} className={`checkoutButton ${className}`}>
           {children} <RightArrow />
-        </Link>
+        </a>
       )}
     </>
   )

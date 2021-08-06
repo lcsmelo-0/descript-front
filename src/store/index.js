@@ -9,20 +9,11 @@ import reducers from './ducks'
 
 const middlewares = []
 
-const sagaMonitor = process.env.NODE_ENV === 'development' ? console.tron.createSagaMonitor() : null
-const sagaMiddleware = createSagaMiddleware({ sagaMonitor })
+const sagaMiddleware = createSagaMiddleware()
 
 middlewares.push(sagaMiddleware)
 
-const dummy = _ => _
-
-const store = createStore(
-  persistReducers(reducers),
-  compose(
-    applyMiddleware(...middlewares),
-    process.env.NODE_ENV === 'development' ? console.tron.createEnhancer() : dummy,
-  ),
-)
+const store = createStore(persistReducers(reducers), compose(applyMiddleware(...middlewares)))
 const persistor = persistStore(store)
 
 sagaMiddleware.run(sagas)

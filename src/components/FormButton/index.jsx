@@ -1,10 +1,10 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { useRouter } from 'next/router'
 
 export const FormButton = ({ className, children, to }) => {
+  const router = useRouter()
   return (
-    <Link to={to}>
-      <button className={`btn btn-primary btn-block ${className}`}>{children}</button>
-    </Link>
+    <button onClick={() => router.push(to)} className={`btn btn-primary btn-block ${className}`}>
+      {children}
+    </button>
   )
 }

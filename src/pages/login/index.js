@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Redirect } from 'react-router-dom'
 import * as Yup from 'yup'
 import { Container, Col } from 'reactstrap'
 

@@ -14,3 +14,4 @@ coverage
 src/assets/css
 src/assets/scss/black-dashboard-react
 *.yml
+.next/
