@@ -4,8 +4,8 @@ import { Switch, Route } from 'react-router-dom'
 import { PrivateRoute } from './PrivateRoute'
 
 import Login from '../pages/login'
-import Client from '../pages/client'
-import Editor from '../pages/editor'
+import Client from '../pages/Client'
+import Editor from '../pages/Editor'
 import Reviser from '../pages/reviser'
 import Home from '../pages/home'
 import Detail from '../pages/detail'
@@ -30,10 +30,10 @@ const Routes = () => (
     <Route exact path="/termos" component={Terms} />
     <Route exact path="/faq" component={Faq} />
     <PrivateRoute exact path="/editor" component={Editor} />
-    <PrivateRoute exact path="/client" component={Client} />
-    <PrivateRoute exact path="/reviser" component={Reviser} />
-    <PrivateRoute exact path="/detail/:id" component={Detail} />
-    <PrivateRoute exact path="/client/image" component={ClientForm} />
+    <PrivateRoute exact path="/cliente" component={Client} />
+    <PrivateRoute exact path="/revisor" component={Reviser} />
+    <PrivateRoute exact path="/detalhe/:id" component={Detail} />
+    <PrivateRoute exact path="/cliente/imagem" component={ClientForm} />
   </Switch>
 )
 

@@ -93,7 +93,7 @@ const Payment = () => {
             onFocus={handleInputFocus}
           />
         </FormGroup>
-        <FormButton>Finalizar Pagamento</FormButton>
+        <FormButton to='/cliente'>Finalizar Pagamento</FormButton>
       </Form>
     </div>
   )

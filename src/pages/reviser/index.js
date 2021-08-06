@@ -11,30 +11,27 @@ import {
   CardHeader,
   Row,
   Col,
-  Container,
   Badge,
   CardFooter,
 } from 'reactstrap'
 
-import Spinner from '../../components/icons/Spinner'
 
 const Reviser = props => {
   const dispatch = useDispatch()
 
   const { images, loading } = useSelector(state => state.image)
   const stableDispatch = useCallback(dispatch, [])
+  
   useEffect(() => {
     dispatch(ImageActions.getImagesRequest())
   }, [stableDispatch])
 
   return (
     <>
-      {loading ? (
-        <div className="container d-flex flex-column  md-12">
-          <Spinner />
+        <div className='container'>
+        <div>
+          <h1>Revisor</h1>
         </div>
-      ) : (
-        <Container>
           <Row md="12" className="d-flex flex-row justify-content-start">
             {images.map(img => {
               return (
@@ -78,8 +75,7 @@ const Reviser = props => {
               )
             })}
           </Row>
-        </Container>
-      )}
+        </div>
     </>
   )
 }
