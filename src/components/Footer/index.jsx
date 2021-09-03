@@ -1,4 +1,4 @@
-import logo from '../../assets/img/logo-branco.png'
+
 import './footer.module.css'
 
 const Footer = () => {
@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-lg-4 mb-5 mb-lg-0">
               <a href="index.html">
-                <img src={logo} alt="Logo" />
+                <img src="https://storage.googleapis.com/teste-front.appspot.com/logo-branco.png" alt="Logo" />
               </a>
               <p className="mt-4 text-sm opacity-8 pr-lg-4">
                 O Descript tenta oferecer a melhor plataforma de audio descrição para o seu negócio.

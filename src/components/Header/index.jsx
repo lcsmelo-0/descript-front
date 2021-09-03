@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-import logoApp from '../../../public/logonovo.png'
 import { excludeData } from '../../services/auth'
 
 const Header = () => {
@@ -26,7 +25,7 @@ const Header = () => {
       <nav className="navbar navbar-main navbar-expand-lg navbar-light" id="navbar-main">
         <div className="container">
           <a className="navbar-brand" onClick={() => goTo('/')}>
-            <img src={logoApp} alt="Logo do descript" />
+            <img src="https://storage.googleapis.com/teste-front.appspot.com/logonovo.png" alt="Logo do descript" />
           </a>
           <button className="navbar-toggler" type="button" onClick={toggleNavbar} aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
