@@ -4,8 +4,10 @@
   "private": true,
   "homepage": "https://sonderybr.github.io/blindless/",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "format": "prettier --write ."
@@ -18,6 +20,7 @@
     "bootstrap": "5.0.2",
     "file-saver": "^2.0.2",
     "lodash": "^4.17.15",
+    "next": "^11.1.2",
     "node-sass": "^5.0.0",
     "payment": "^2.4.0",
     "react": "^16.13.1",
@@ -40,6 +43,7 @@
     "yup": "^0.28.1"
   },
   "devDependencies": {
+    "eslint-config-next": "^11.1.2",
     "gh-pages": "^3.2.3",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.7",
